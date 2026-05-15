@@ -60,6 +60,53 @@ function calculateSD(prices, period, sma) {
     return Math.sqrt(avgSqDiff);
 }
 
+function analyzeStock(m) {
+    const bb = parseFloat(m.bbPosition);
+    const smaSlope = parseFloat(m.smaSlope);
+    const upperSlope = parseFloat(m.upperSlope);
+    
+    let recommendation = { score: 0, strategy: 'Neutral', reasons: [] };
+
+    // Strategy A: Breakout
+    if (bb > 8 && smaSlope > 1 && upperSlope > 2) {
+        recommendation = {
+            score: 90,
+            strategy: '突破佈局',
+            reasons: [
+                '股價逼近布林通道上軌，顯示強勁向上動能。',
+                `通道上軌斜率達 ${upperSlope}%，顯示波動率正向擴張，有噴發潛力。`,
+                '均線斜率向上，呈現多頭排列態勢。'
+            ]
+        };
+    } 
+    // Strategy B: Trend Following
+    else if (bb > 2 && bb <= 8 && smaSlope > 1.5) {
+        recommendation = {
+            score: 80,
+            strategy: '多頭延續',
+            reasons: [
+                `20日均線持續向上 (斜率 ${smaSlope}%)，走勢穩健。`,
+                '股價回測中軌後獲得支撐，目前位於多頭安全區間。',
+                '適合順勢操作，等待下一波攻擊。'
+            ]
+        };
+    }
+    // Strategy C: Oversold Rebound
+    else if (bb < -8 && smaSlope > -0.5) {
+        recommendation = {
+            score: 70,
+            strategy: '超跌反彈',
+            reasons: [
+                '股價已跌至布林通道下軌附近 (超賣區)，短線乖離率大。',
+                '均線下行趨勢顯著緩和，賣壓趨於竭盡。',
+                '技術面存在跌深反彈的需求。'
+            ]
+        };
+    }
+
+    return recommendation;
+}
+
 async function getMetrics(stock) {
     try {
         const endDate = new Date();
@@ -98,7 +145,7 @@ async function getMetrics(stock) {
         const smaSlope = ((sma20 - prevSma20) / prevSma20) * 100;
         const upperSlope = ((upper - prevUpper) / prevUpper) * 100;
 
-        return {
+        const metrics = {
             ...stock,
             price: current.toFixed(2),
             bbPosition: bbPos.toFixed(2),
@@ -106,6 +153,9 @@ async function getMetrics(stock) {
             upperSlope: upperSlope.toFixed(2),
             updatedAt: new Date().toISOString()
         };
+        
+        metrics.analysis = analyzeStock(metrics);
+        return metrics;
     } catch (e) {
         console.error('Error for ' + stock.symbol + ': ' + e.message);
         return null;
