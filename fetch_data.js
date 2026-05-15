@@ -69,18 +69,19 @@ function analyzeStock(m) {
     let recommendation = { score: 0, strategy: 'Neutral', reasons: [] };
 
     const weeklyText = weeklyChange > 0 
-        ? `近一週漲幅達 ${weeklyChange}%，表現強於大盤。` 
-        : (weeklyChange < 0 ? `近一週跌幅 ${Math.abs(weeklyChange)}%，正處於修正階段。` : '近一週價格持平。');
+        ? `📈 本週上漲 ${weeklyChange}%，動能不錯。` 
+        : (weeklyChange < 0 ? `📉 本週下跌 ${Math.abs(weeklyChange)}%，正在回檔。` : '↔️ 本週價格波動不大。');
 
     // Strategy A: Breakout
     if (bb > 8 && smaSlope > 1 && upperSlope > 2) {
         recommendation = {
             score: 90,
-            strategy: '突破佈局',
+            strategy: '強勢噴發',
             reasons: [
-                '股價貼著布林通道上軌，正處於極強的多頭噴發期。',
-                `通道上軌斜率達 ${upperSlope}%，波動率劇烈擴張，通常伴隨大行情。`,
-                weeklyText
+                `🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。`,
+                `🚀 **加速中**：均線斜率 ${smaSlope}% 代表趨勢正向上加速，不容易馬上回頭。`,
+                weeklyText,
+                `💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。`
             ]
         };
     } 
@@ -88,11 +89,12 @@ function analyzeStock(m) {
     else if (bb > 2 && bb <= 8 && smaSlope > 1.5) {
         recommendation = {
             score: 80,
-            strategy: '多頭延續',
+            strategy: '穩健上漲',
             reasons: [
-                `20日均線（生命線）穩定向上，長期趨勢看好。`,
-                '股價回測支撐後再度轉強，目前位於安全的操作區間。',
-                weeklyText
+                `✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 ${smaSlope}%），走得很穩。`,
+                `🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。`,
+                weeklyText,
+                `💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。`
             ]
         };
     }
@@ -100,11 +102,12 @@ function analyzeStock(m) {
     else if (bb < -8 && smaSlope > -0.5) {
         recommendation = {
             score: 70,
-            strategy: '超跌反彈',
+            strategy: '跌深反彈',
             reasons: [
-                '股價嚴重乖離布林下軌，短線超跌，隨時可能出現報復性反彈。',
-                '均線下行斜率趨緩，代表低檔承接力道轉強。',
-                weeklyText
+                `🆘 **嚴重超跌**：股價已經跌破了近期的正常範圍（布林下軌），通常會有人想進場撿便宜。`,
+                `🛑 **跌勢止住**：雖然之前在跌，但目前趨勢已經開始走平，不再劇烈重挫。`,
+                weeklyText,
+                `💡 **白話解釋**：這支股票「跌過頭了」，隨時可能像皮球掉到地上後彈起來。`
             ]
         };
     }
