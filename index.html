@@ -48,14 +48,14 @@
         }
 
         .stock-grid {
-            columns: 3 300px;
-            column-gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            align-items: start;
             width: 100%;
         }
 
         .stock-card {
-            break-inside: avoid;
-            margin-bottom: 20px;
             background: var(--card-bg);
             border-radius: 12px;
             padding: 20px;
@@ -63,7 +63,6 @@
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
             border: 2px solid transparent;
-            display: inline-block;
             width: 100%;
             box-sizing: border-box;
         }
