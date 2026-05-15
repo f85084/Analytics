@@ -48,12 +48,14 @@
         }
 
         .stock-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+            columns: 3 300px;
+            column-gap: 20px;
+            width: 100%;
         }
 
         .stock-card {
+            break-inside: avoid;
+            margin-bottom: 20px;
             background: var(--card-bg);
             border-radius: 12px;
             padding: 20px;
@@ -61,6 +63,9 @@
             transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
             border: 2px solid transparent;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
         }
         .stock-card:hover {
             transform: translateY(-4px);
@@ -95,9 +100,20 @@
             display: flex;
             align-items: baseline;
             gap: 8px;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
         }
         .price { font-size: 1.5em; font-weight: 700; color: #1e293b; }
+
+        .weekly-trend {
+            margin-bottom: 15px;
+            font-size: 0.85em;
+            padding: 4px 8px;
+            background: #f8fafc;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        .trend-up { color: #ef4444; font-weight: bold; }
+        .trend-down { color: #22c55e; font-weight: bold; }
 
         .why-section {
             margin-top: 15px;
@@ -200,53 +216,61 @@
                 return;
             }
 
-            filtered.forEach(item => {
-                const isRec = item.analysis.score > 0;
-                const card = document.createElement('div');
-                card.className = `stock-card ${isRec ? 'recommended' : ''}`;
-                card.onclick = () => {
-                    const why = card.querySelector('.why-section');
-                    why.classList.toggle('active');
-                };
+                filtered.forEach(item => {
+                    const isRec = item.analysis.score > 0;
+                    const card = document.createElement('div');
+                    card.className = `stock-card ${isRec ? 'recommended' : ''}`;
+                    card.onclick = () => {
+                        const why = card.querySelector('.why-section');
+                        why.classList.toggle('active');
+                    };
 
-                const strategyClass = getStrategyClass(item.analysis.strategy);
-                const marketText = item.market === 'Listed' ? '上市' : '上櫃';
-
-                card.innerHTML = `
-                    <div class="card-header">
-                        <div class="stock-info">
-                            <h2>${item.name} <span class="ticker">${item.ticker}</span></h2>
-                            <div style="font-size: 0.75em; color: var(--secondary); margin-top: 2px;">${marketText}</div>
-                        </div>
-                        <span class="strategy-badge ${strategyClass}">${item.analysis.strategy}</span>
-                    </div>
+                    const strategyClass = getStrategyClass(item.analysis.strategy);
+                    const marketText = item.market === 'Listed' ? '上市' : '上櫃';
                     
-                    <div class="price-row">
-                        <span class="price">$${item.price}</span>
-                        <span style="font-size: 0.85em; color: ${item.analysis.score > 0 ? 'var(--success)' : 'var(--secondary)'}; font-weight: 600;">
-                            ${item.analysis.score > 0 ? '推薦評分: ' + item.analysis.score : ''}
-                        </span>
-                    </div>
+                    const weeklyChange = item.weeklyChange || 0;
+                    const trendClass = weeklyChange > 0 ? 'trend-up' : (weeklyChange < 0 ? 'trend-down' : '');
+                    const trendArrow = weeklyChange > 0 ? '▲' : (weeklyChange < 0 ? '▼' : '');
 
-                    <div class="metrics-grid">
-                        <div class="metric-item">布林位置: ${item.bbPosition}</div>
-                        <div class="metric-item">均線斜率: ${item.smaSlope}%</div>
-                    </div>
-
-                    <div class="why-section ${isRec ? 'active' : ''}">
-                        <div class="why-title">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                            數據分析 (為什麼推薦？)
+                    card.innerHTML = `
+                        <div class="card-header">
+                            <div class="stock-info">
+                                <h2>${item.name} <span class="ticker">${item.ticker}</span></h2>
+                                <div style="font-size: 0.75em; color: var(--secondary); margin-top: 2px;">${marketText}</div>
+                            </div>
+                            <span class="strategy-badge ${strategyClass}">${item.analysis.strategy}</span>
                         </div>
-                        <ul class="reason-list">
-                            ${item.analysis.reasons.length > 0 
-                                ? item.analysis.reasons.map(r => `<li>${r}</li>`).join('')
-                                : '<li>目前指標處於中性區間，建議觀望。</li>'}
-                        </ul>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
+                        
+                        <div class="price-row">
+                            <span class="price">$${item.price}</span>
+                            <span style="font-size: 0.85em; color: ${item.analysis.score > 0 ? 'var(--success)' : 'var(--secondary)'}; font-weight: 600;">
+                                ${item.analysis.score > 0 ? '推薦評分: ' + item.analysis.score : ''}
+                            </span>
+                        </div>
+
+                        <div class="weekly-trend">
+                            近一週漲跌: <span class="${trendClass}">${trendArrow} ${Math.abs(weeklyChange).toFixed(2)}%</span>
+                        </div>
+
+                        <div class="metrics-grid">
+                            <div class="metric-item">布林位置: ${item.bbPosition}</div>
+                            <div class="metric-item">均線斜率: ${item.smaSlope}%</div>
+                        </div>
+
+                        <div class="why-section">
+                            <div class="why-title">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                數據分析 (為什麼推薦？)
+                            </div>
+                            <ul class="reason-list">
+                                ${item.analysis.reasons.length > 0 
+                                    ? item.analysis.reasons.map(r => `<li>${r}</li>`).join('')
+                                    : '<li>目前指標處於中性區間，建議觀望。</li>'}
+                            </ul>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
         }
 
         window.onload = loadData;

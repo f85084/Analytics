@@ -64,8 +64,13 @@ function analyzeStock(m) {
     const bb = parseFloat(m.bbPosition);
     const smaSlope = parseFloat(m.smaSlope);
     const upperSlope = parseFloat(m.upperSlope);
+    const weeklyChange = parseFloat(m.weeklyChange);
     
     let recommendation = { score: 0, strategy: 'Neutral', reasons: [] };
+
+    const weeklyText = weeklyChange > 0 
+        ? `近一週漲幅達 ${weeklyChange}%，表現強於大盤。` 
+        : (weeklyChange < 0 ? `近一週跌幅 ${Math.abs(weeklyChange)}%，正處於修正階段。` : '近一週價格持平。');
 
     // Strategy A: Breakout
     if (bb > 8 && smaSlope > 1 && upperSlope > 2) {
@@ -73,9 +78,9 @@ function analyzeStock(m) {
             score: 90,
             strategy: '突破佈局',
             reasons: [
-                '股價逼近布林通道上軌，顯示強勁向上動能。',
-                `通道上軌斜率達 ${upperSlope}%，顯示波動率正向擴張，有噴發潛力。`,
-                '均線斜率向上，呈現多頭排列態勢。'
+                '股價貼著布林通道上軌，正處於極強的多頭噴發期。',
+                `通道上軌斜率達 ${upperSlope}%，波動率劇烈擴張，通常伴隨大行情。`,
+                weeklyText
             ]
         };
     } 
@@ -85,9 +90,9 @@ function analyzeStock(m) {
             score: 80,
             strategy: '多頭延續',
             reasons: [
-                `20日均線持續向上 (斜率 ${smaSlope}%)，走勢穩健。`,
-                '股價回測中軌後獲得支撐，目前位於多頭安全區間。',
-                '適合順勢操作，等待下一波攻擊。'
+                `20日均線（生命線）穩定向上，長期趨勢看好。`,
+                '股價回測支撐後再度轉強，目前位於安全的操作區間。',
+                weeklyText
             ]
         };
     }
@@ -97,9 +102,9 @@ function analyzeStock(m) {
             score: 70,
             strategy: '超跌反彈',
             reasons: [
-                '股價已跌至布林通道下軌附近 (超賣區)，短線乖離率大。',
-                '均線下行趨勢顯著緩和，賣壓趨於竭盡。',
-                '技術面存在跌深反彈的需求。'
+                '股價嚴重乖離布林下軌，短線超跌，隨時可能出現報復性反彈。',
+                '均線下行斜率趨緩，代表低檔承接力道轉強。',
+                weeklyText
             ]
         };
     }
@@ -145,12 +150,21 @@ async function getMetrics(stock) {
         const smaSlope = ((sma20 - prevSma20) / prevSma20) * 100;
         const upperSlope = ((upper - prevUpper) / prevUpper) * 100;
 
+        // Calculate weekly change (approx. last 5 trading days)
+        let weeklyChange = 0;
+        if (prices.length >= 6) {
+            const currentPrice = prices[0];
+            const price5DaysAgo = prices[5];
+            weeklyChange = ((currentPrice - price5DaysAgo) / price5DaysAgo) * 100;
+        }
+
         const metrics = {
             ...stock,
             price: current.toFixed(2),
             bbPosition: bbPos.toFixed(2),
             smaSlope: smaSlope.toFixed(2),
             upperSlope: upperSlope.toFixed(2),
+            weeklyChange: weeklyChange.toFixed(2),
             updatedAt: new Date().toISOString()
         };
         
