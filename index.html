@@ -151,7 +151,7 @@
         .metric-item { background: #f8fafc; padding: 6px; border-radius: 4px; }
 
         .empty-state { text-align: center; grid-column: 1 / -1; padding: 40px; color: var(--secondary); }
-        .last-updated { text-align: center; margin-top: 40px; font-size: 0.8em; color: var(--secondary); }
+        .last-updated { text-align: center; margin-bottom: 20px; font-size: 0.8em; color: var(--secondary); }
     </style>
 </head>
 <body>
@@ -160,19 +160,19 @@
         <p class="subtitle">根據布林通道與均線斜率進行的大數據分析推薦</p>
     </header>
 
+    <div class="last-updated">最後更新: <span id="last-updated-time">-</span></div>
+
     <div class="filters">
         <button class="filter-btn active" onclick="filterData('all')">全部股票</button>
         <button class="filter-btn" onclick="filterData('recommended')">🔥 智慧推薦</button>
-        <button class="filter-btn" onclick="filterData('breakout')">突破佈局</button>
-        <button class="filter-btn" onclick="filterData('trend')">多頭延續</button>
-        <button class="filter-btn" onclick="filterData('rebound')">超跌反彈</button>
+        <button class="filter-btn" onclick="filterData('breakout')">強勢噴發</button>
+        <button class="filter-btn" onclick="filterData('trend')">穩健上漲</button>
+        <button class="filter-btn" onclick="filterData('rebound')">跌深反彈</button>
     </div>
 
     <div id="stock-grid" class="stock-grid">
         <!-- Cards will be inserted here -->
     </div>
-
-    <div class="last-updated">最後更新: <span id="last-updated-time">-</span></div>
 
     <script>
         let allData = [];
@@ -197,9 +197,9 @@
         }
 
         function getStrategyClass(strategy) {
-            if (strategy === '突破佈局') return 'strategy-breakout';
-            if (strategy === '多頭延續') return 'strategy-trend';
-            if (strategy === '超跌反彈') return 'strategy-rebound';
+            if (strategy === '強勢噴發') return 'strategy-breakout';
+            if (strategy === '穩健上漲') return 'strategy-trend';
+            if (strategy === '跌深反彈') return 'strategy-rebound';
             return 'strategy-neutral';
         }
 
@@ -219,9 +219,9 @@
             const filtered = allData.filter(item => {
                 if (currentFilter === 'all') return true;
                 if (currentFilter === 'recommended') return item.analysis.score > 0;
-                if (currentFilter === 'breakout') return item.analysis.strategy === '突破佈局';
-                if (currentFilter === 'trend') return item.analysis.strategy === '多頭延續';
-                if (currentFilter === 'rebound') return item.analysis.strategy === '超跌反彈';
+                if (currentFilter === 'breakout') return item.analysis.strategy === '強勢噴發';
+                if (currentFilter === 'trend') return item.analysis.strategy === '穩健上漲';
+                if (currentFilter === 'rebound') return item.analysis.strategy === '跌深反彈';
                 return true;
             });
 

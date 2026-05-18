@@ -1,189 +1,23 @@
 [
   {
-    "symbol": "3135.TW",
-    "ticker": "3135",
-    "name": "凌航",
-    "market": "Listed",
-    "price": "216.00",
-    "bbPosition": "8.18",
-    "smaSlope": "3.02",
-    "upperSlope": "3.53",
-    "weeklyChange": "22.03",
-    "updatedAt": "2026-05-15T09:03:28.883Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 3.02% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 22.03%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
-    "symbol": "4760.TWO",
-    "ticker": "4760",
-    "name": "勤凱",
-    "market": "OTC",
-    "price": "299.00",
-    "bbPosition": "6.51",
-    "smaSlope": "0.63",
-    "upperSlope": "1.31",
-    "weeklyChange": "4.00",
-    "updatedAt": "2026-05-15T09:03:29.975Z",
-    "analysis": {
-      "score": 0,
-      "strategy": "Neutral",
-      "reasons": []
-    }
-  },
-  {
-    "symbol": "5228.TWO",
-    "ticker": "5228",
-    "name": "鈺鎧",
-    "market": "OTC",
-    "price": "49.15",
-    "bbPosition": "9.43",
-    "smaSlope": "2.09",
-    "upperSlope": "3.93",
-    "weeklyChange": "23.03",
-    "updatedAt": "2026-05-15T09:03:31.108Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 2.09% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 23.03%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
-    "symbol": "6166.TW",
-    "ticker": "6166",
-    "name": "凌華",
-    "market": "Listed",
-    "price": "112.00",
-    "bbPosition": "10.30",
-    "smaSlope": "2.49",
-    "upperSlope": "4.12",
-    "weeklyChange": "28.29",
-    "updatedAt": "2026-05-15T09:03:32.210Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 2.49% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 28.29%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
-    "symbol": "6829.TWO",
-    "ticker": "6829",
-    "name": "千附精密",
-    "market": "OTC",
-    "price": "198.00",
-    "bbPosition": "-7.81",
-    "smaSlope": "0.39",
-    "upperSlope": "-0.87",
-    "weeklyChange": "-20.96",
-    "updatedAt": "2026-05-15T09:03:33.288Z",
-    "analysis": {
-      "score": 0,
-      "strategy": "Neutral",
-      "reasons": []
-    }
-  },
-  {
-    "symbol": "8444.TWO",
-    "ticker": "8444",
-    "name": "綠河-KY",
-    "market": "OTC",
-    "price": "9.02",
-    "bbPosition": "11.10",
-    "smaSlope": "3.07",
-    "upperSlope": "6.16",
-    "weeklyChange": "34.63",
-    "updatedAt": "2026-05-15T09:03:34.376Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 3.07% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 34.63%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
-    "symbol": "2327.TW",
-    "ticker": "2327",
-    "name": "國巨*",
-    "market": "Listed",
-    "price": "455.50",
-    "bbPosition": "10.05",
-    "smaSlope": "1.88",
-    "upperSlope": "3.96",
-    "weeklyChange": "17.10",
-    "updatedAt": "2026-05-15T09:03:35.496Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 1.88% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 17.1%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
-    "symbol": "3357.TWO",
-    "ticker": "3357",
-    "name": "臺慶科",
-    "market": "OTC",
-    "price": "220.00",
-    "bbPosition": "10.06",
-    "smaSlope": "1.24",
-    "upperSlope": "2.93",
-    "weeklyChange": "17.33",
-    "updatedAt": "2026-05-15T09:03:36.589Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 1.24% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 17.33%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
     "symbol": "3374.TWO",
     "ticker": "3374",
     "name": "精材",
     "market": "OTC",
-    "price": "278.00",
-    "bbPosition": "12.00",
-    "smaSlope": "2.22",
-    "upperSlope": "4.58",
-    "weeklyChange": "22.74",
-    "updatedAt": "2026-05-15T09:03:37.697Z",
+    "price": "250.50",
+    "bbPosition": "6.10",
+    "smaSlope": "1.53",
+    "upperSlope": "1.30",
+    "weeklyChange": "0.60",
+    "updatedAt": "2026-05-18T03:19:22.933Z",
     "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
+      "score": 80,
+      "strategy": "穩健上漲",
       "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 2.22% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 22.74%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.53%），走得很穩。",
+        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
+        "📈 本週上漲 0.6%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
   },
@@ -192,41 +26,19 @@
     "ticker": "3498",
     "name": "陽程",
     "market": "OTC",
-    "price": "149.00",
-    "bbPosition": "13.57",
-    "smaSlope": "3.61",
-    "upperSlope": "9.05",
-    "weeklyChange": "59.36",
-    "updatedAt": "2026-05-15T09:03:38.788Z",
+    "price": "140.50",
+    "bbPosition": "9.64",
+    "smaSlope": "2.88",
+    "upperSlope": "4.99",
+    "weeklyChange": "37.07",
+    "updatedAt": "2026-05-18T03:19:24.079Z",
     "analysis": {
       "score": 90,
       "strategy": "強勢噴發",
       "reasons": [
         "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 3.61% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 59.36%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
-    "symbol": "3624.TWO",
-    "ticker": "3624",
-    "name": "光頡",
-    "market": "OTC",
-    "price": "76.20",
-    "bbPosition": "12.44",
-    "smaSlope": "1.77",
-    "upperSlope": "5.25",
-    "weeklyChange": "29.15",
-    "updatedAt": "2026-05-15T09:03:39.878Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 1.77% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 29.15%，動能不錯。",
+        "🚀 **加速中**：均線斜率 2.88% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 37.07%，動能不錯。",
         "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
@@ -236,12 +48,185 @@
     "ticker": "4971",
     "name": "IET-KY",
     "market": "OTC",
-    "price": "705.00",
-    "bbPosition": "-6.96",
-    "smaSlope": "0.04",
-    "upperSlope": "-0.08",
-    "weeklyChange": "2.47",
-    "updatedAt": "2026-05-15T09:03:41.068Z",
+    "price": "715.00",
+    "bbPosition": "-5.58",
+    "smaSlope": "-0.33",
+    "upperSlope": "0.10",
+    "weeklyChange": "-1.11",
+    "updatedAt": "2026-05-18T03:19:25.275Z",
+    "analysis": {
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "6419.TWO",
+    "ticker": "6419",
+    "name": "京晨科",
+    "market": "OTC",
+    "price": "175.50",
+    "bbPosition": "7.89",
+    "smaSlope": "1.61",
+    "upperSlope": "1.87",
+    "weeklyChange": "28.10",
+    "updatedAt": "2026-05-18T03:19:26.369Z",
+    "analysis": {
+      "score": 80,
+      "strategy": "穩健上漲",
+      "reasons": [
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.61%），走得很穩。",
+        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
+        "📈 本週上漲 28.1%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+      ]
+    }
+  },
+  {
+    "symbol": "6449.TW",
+    "ticker": "6449",
+    "name": "鈺邦",
+    "market": "Listed",
+    "price": "260.50",
+    "bbPosition": "11.63",
+    "smaSlope": "2.36",
+    "upperSlope": "5.92",
+    "weeklyChange": "44.32",
+    "updatedAt": "2026-05-18T03:19:27.460Z",
+    "analysis": {
+      "score": 90,
+      "strategy": "強勢噴發",
+      "reasons": [
+        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
+        "🚀 **加速中**：均線斜率 2.36% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 44.32%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
+      ]
+    }
+  },
+  {
+    "symbol": "2066.TWO",
+    "ticker": "2066",
+    "name": "世德",
+    "market": "OTC",
+    "price": "58.70",
+    "bbPosition": "11.56",
+    "smaSlope": "1.30",
+    "upperSlope": "3.58",
+    "weeklyChange": "24.89",
+    "updatedAt": "2026-05-18T03:19:28.551Z",
+    "analysis": {
+      "score": 90,
+      "strategy": "強勢噴發",
+      "reasons": [
+        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
+        "🚀 **加速中**：均線斜率 1.3% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 24.89%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
+      ]
+    }
+  },
+  {
+    "symbol": "2221.TWO",
+    "ticker": "2221",
+    "name": "大甲",
+    "market": "OTC",
+    "price": "45.60",
+    "bbPosition": "8.88",
+    "smaSlope": "1.77",
+    "upperSlope": "1.92",
+    "weeklyChange": "20.00",
+    "updatedAt": "2026-05-18T03:19:29.656Z",
+    "analysis": {
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "3008.TW",
+    "ticker": "3008",
+    "name": "大立光",
+    "market": "Listed",
+    "price": "3210.00",
+    "bbPosition": "9.89",
+    "smaSlope": "1.13",
+    "upperSlope": "2.73",
+    "weeklyChange": "26.13",
+    "updatedAt": "2026-05-18T03:19:30.783Z",
+    "analysis": {
+      "score": 90,
+      "strategy": "強勢噴發",
+      "reasons": [
+        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
+        "🚀 **加速中**：均線斜率 1.13% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 26.13%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
+      ]
+    }
+  },
+  {
+    "symbol": "3219.TWO",
+    "ticker": "3219",
+    "name": "倚強科",
+    "market": "OTC",
+    "price": "84.30",
+    "bbPosition": "7.68",
+    "smaSlope": "1.04",
+    "upperSlope": "2.06",
+    "weeklyChange": "11.66",
+    "updatedAt": "2026-05-18T03:19:31.901Z",
+    "analysis": {
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "3228.TWO",
+    "ticker": "3228",
+    "name": "金麗科",
+    "market": "OTC",
+    "price": "196.00",
+    "bbPosition": "-2.75",
+    "smaSlope": "1.39",
+    "upperSlope": "-2.18",
+    "weeklyChange": "-18.84",
+    "updatedAt": "2026-05-18T03:19:32.994Z",
+    "analysis": {
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "3665.TW",
+    "ticker": "3665",
+    "name": "貿聯-KY",
+    "market": "Listed",
+    "price": "2005.00",
+    "bbPosition": "-12.09",
+    "smaSlope": "-0.68",
+    "upperSlope": "1.60",
+    "weeklyChange": "-30.98",
+    "updatedAt": "2026-05-18T03:19:34.080Z",
+    "analysis": {
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "4749.TWO",
+    "ticker": "4749",
+    "name": "新應材",
+    "market": "OTC",
+    "price": "994.00",
+    "bbPosition": "-3.03",
+    "smaSlope": "0.48",
+    "upperSlope": "-0.65",
+    "weeklyChange": "-15.40",
+    "updatedAt": "2026-05-18T03:19:35.158Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -253,56 +238,34 @@
     "ticker": "5289",
     "name": "宜鼎",
     "market": "OTC",
-    "price": "1760.00",
-    "bbPosition": "6.57",
-    "smaSlope": "2.48",
-    "upperSlope": "2.36",
-    "weeklyChange": "10.00",
-    "updatedAt": "2026-05-15T09:03:42.155Z",
+    "price": "1860.00",
+    "bbPosition": "7.53",
+    "smaSlope": "3.07",
+    "upperSlope": "2.47",
+    "weeklyChange": "5.68",
+    "updatedAt": "2026-05-18T03:19:36.250Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.48%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 3.07%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 10%，動能不錯。",
+        "📈 本週上漲 5.68%，動能不錯。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
   },
   {
-    "symbol": "6208.TWO",
-    "ticker": "6208",
-    "name": "日揚",
+    "symbol": "6217.TWO",
+    "ticker": "6217",
+    "name": "中探針",
     "market": "OTC",
-    "price": "99.80",
-    "bbPosition": "10.13",
-    "smaSlope": "1.49",
-    "upperSlope": "2.96",
-    "weeklyChange": "37.85",
-    "updatedAt": "2026-05-15T09:03:43.258Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 1.49% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 37.85%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
-    "symbol": "6223.TWO",
-    "ticker": "6223",
-    "name": "旺矽",
-    "market": "OTC",
-    "price": "5895.00",
-    "bbPosition": "9.54",
-    "smaSlope": "0.96",
-    "upperSlope": "2.15",
-    "weeklyChange": "17.31",
-    "updatedAt": "2026-05-15T09:03:44.354Z",
+    "price": "290.00",
+    "bbPosition": "0.39",
+    "smaSlope": "0.80",
+    "upperSlope": "-0.72",
+    "weeklyChange": "2.84",
+    "updatedAt": "2026-05-18T03:19:37.340Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -310,125 +273,86 @@
     }
   },
   {
-    "symbol": "6278.TW",
-    "ticker": "6278",
-    "name": "台表科",
+    "symbol": "6225.TW",
+    "ticker": "6225",
+    "name": "天瀚",
     "market": "Listed",
-    "price": "220.50",
-    "bbPosition": "8.11",
-    "smaSlope": "2.23",
-    "upperSlope": "2.53",
-    "weeklyChange": "9.70",
-    "updatedAt": "2026-05-15T09:03:45.448Z",
+    "price": "35.00",
+    "bbPosition": "10.61",
+    "smaSlope": "3.56",
+    "upperSlope": "6.45",
+    "weeklyChange": "40.56",
+    "updatedAt": "2026-05-18T03:19:38.429Z",
     "analysis": {
       "score": 90,
       "strategy": "強勢噴發",
       "reasons": [
         "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 2.23% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 9.7%，動能不錯。",
+        "🚀 **加速中**：均線斜率 3.56% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 40.56%，動能不錯。",
         "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
   },
   {
-    "symbol": "6419.TWO",
-    "ticker": "6419",
-    "name": "京晨科",
-    "market": "OTC",
-    "price": "194.50",
-    "bbPosition": "14.85",
-    "smaSlope": "2.03",
-    "upperSlope": "6.63",
-    "weeklyChange": "35.07",
-    "updatedAt": "2026-05-15T09:03:46.586Z",
-    "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
-      "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 2.03% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 35.07%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
-      ]
-    }
-  },
-  {
-    "symbol": "6449.TW",
-    "ticker": "6449",
-    "name": "鈺邦",
+    "symbol": "6531.TW",
+    "ticker": "6531",
+    "name": "愛普*",
     "market": "Listed",
-    "price": "263.00",
-    "bbPosition": "14.99",
-    "smaSlope": "2.50",
-    "upperSlope": "8.82",
-    "weeklyChange": "43.72",
-    "updatedAt": "2026-05-15T09:03:47.761Z",
+    "price": "1105.00",
+    "bbPosition": "8.44",
+    "smaSlope": "2.64",
+    "upperSlope": "1.76",
+    "weeklyChange": "14.86",
+    "updatedAt": "2026-05-18T03:19:39.524Z",
+    "analysis": {
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "6924.TW",
+    "ticker": "6924",
+    "name": "榮惠-KY創",
+    "market": "Listed",
+    "price": "145.00",
+    "bbPosition": "13.59",
+    "smaSlope": "2.86",
+    "upperSlope": "7.72",
+    "weeklyChange": "40.78",
+    "updatedAt": "2026-05-18T03:19:40.600Z",
     "analysis": {
       "score": 90,
       "strategy": "強勢噴發",
       "reasons": [
         "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 2.5% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 43.72%，動能不錯。",
+        "🚀 **加速中**：均線斜率 2.86% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 40.78%，動能不錯。",
         "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
   },
   {
-    "symbol": "7712.TWO",
-    "ticker": "7712",
-    "name": "博盛半導體",
+    "symbol": "8091.TWO",
+    "ticker": "8091",
+    "name": "翔名",
     "market": "OTC",
-    "price": "151.50",
-    "bbPosition": "6.62",
-    "smaSlope": "1.32",
-    "upperSlope": "1.91",
-    "weeklyChange": "12.64",
-    "updatedAt": "2026-05-15T09:03:48.835Z",
+    "price": "260.50",
+    "bbPosition": "16.22",
+    "smaSlope": "2.06",
+    "upperSlope": "7.70",
+    "weeklyChange": "30.25",
+    "updatedAt": "2026-05-18T03:19:41.698Z",
     "analysis": {
-      "score": 0,
-      "strategy": "Neutral",
-      "reasons": []
-    }
-  },
-  {
-    "symbol": "4529.TWO",
-    "ticker": "4529",
-    "name": "淳紳",
-    "market": "OTC",
-    "price": "5.47",
-    "bbPosition": "5.21",
-    "smaSlope": "2.60",
-    "upperSlope": "-0.13",
-    "weeklyChange": "12.78",
-    "updatedAt": "2026-05-15T09:03:49.922Z",
-    "analysis": {
-      "score": 80,
-      "strategy": "穩健上漲",
+      "score": 90,
+      "strategy": "強勢噴發",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.6%），走得很穩。",
-        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 12.78%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
+        "🚀 **加速中**：均線斜率 2.06% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 30.25%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
-    }
-  },
-  {
-    "symbol": "6735.TWO",
-    "ticker": "6735",
-    "name": "美達科技",
-    "market": "OTC",
-    "price": "124.00",
-    "bbPosition": "0.75",
-    "smaSlope": "2.32",
-    "upperSlope": "-2.20",
-    "weeklyChange": "-1.98",
-    "updatedAt": "2026-05-15T09:03:51.002Z",
-    "analysis": {
-      "score": 0,
-      "strategy": "Neutral",
-      "reasons": []
     }
   },
   {
@@ -436,12 +360,12 @@
     "ticker": "3167",
     "name": "大量",
     "market": "Listed",
-    "price": "735.00",
-    "bbPosition": "0.03",
-    "smaSlope": "0.44",
-    "upperSlope": "0.02",
-    "weeklyChange": "7.46",
-    "updatedAt": "2026-05-15T09:03:52.096Z",
+    "price": "720.00",
+    "bbPosition": "-1.30",
+    "smaSlope": "0.24",
+    "upperSlope": "-0.01",
+    "weeklyChange": "-1.10",
+    "updatedAt": "2026-05-18T03:19:42.803Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -453,16 +377,21 @@
     "ticker": "6234",
     "name": "高僑",
     "market": "OTC",
-    "price": "52.50",
-    "bbPosition": "1.74",
-    "smaSlope": "1.93",
-    "upperSlope": "-0.29",
-    "weeklyChange": "-9.17",
-    "updatedAt": "2026-05-15T09:03:53.201Z",
+    "price": "54.00",
+    "bbPosition": "2.17",
+    "smaSlope": "2.13",
+    "upperSlope": "-0.71",
+    "weeklyChange": "0.00",
+    "updatedAt": "2026-05-18T03:19:43.905Z",
     "analysis": {
-      "score": 0,
-      "strategy": "Neutral",
-      "reasons": []
+      "score": 80,
+      "strategy": "穩健上漲",
+      "reasons": [
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.13%），走得很穩。",
+        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
+        "↔️ 本週價格波動不大。",
+        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+      ]
     }
   },
   {
@@ -470,19 +399,19 @@
     "ticker": "6658",
     "name": "聯策",
     "market": "Listed",
-    "price": "194.00",
-    "bbPosition": "6.42",
-    "smaSlope": "4.25",
-    "upperSlope": "2.21",
-    "weeklyChange": "20.87",
-    "updatedAt": "2026-05-15T09:03:54.280Z",
+    "price": "192.00",
+    "bbPosition": "5.66",
+    "smaSlope": "3.94",
+    "upperSlope": "1.34",
+    "weeklyChange": "8.78",
+    "updatedAt": "2026-05-18T03:19:44.985Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 4.25%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 3.94%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 20.87%，動能不錯。",
+        "📈 本週上漲 8.78%，動能不錯。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -492,12 +421,12 @@
     "ticker": "9949",
     "name": "琉園",
     "market": "OTC",
-    "price": "23.70",
-    "bbPosition": "-4.42",
-    "smaSlope": "-2.07",
-    "upperSlope": "-2.24",
-    "weeklyChange": "-3.27",
-    "updatedAt": "2026-05-15T09:03:55.375Z",
+    "price": "24.00",
+    "bbPosition": "-3.72",
+    "smaSlope": "-2.04",
+    "upperSlope": "-2.65",
+    "weeklyChange": "0.00",
+    "updatedAt": "2026-05-18T03:19:46.080Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -509,12 +438,12 @@
     "ticker": "2455",
     "name": "全新",
     "market": "Listed",
-    "price": "358.50",
-    "bbPosition": "2.92",
-    "smaSlope": "1.00",
-    "upperSlope": "-0.72",
-    "weeklyChange": "6.38",
-    "updatedAt": "2026-05-15T09:03:56.467Z",
+    "price": "363.00",
+    "bbPosition": "3.62",
+    "smaSlope": "0.76",
+    "upperSlope": "-0.06",
+    "weeklyChange": "0.83",
+    "updatedAt": "2026-05-18T03:19:47.166Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -526,20 +455,20 @@
     "ticker": "8027",
     "name": "鈦昇",
     "market": "OTC",
-    "price": "247.00",
-    "bbPosition": "7.40",
-    "smaSlope": "2.73",
-    "upperSlope": "2.77",
-    "weeklyChange": "21.67",
-    "updatedAt": "2026-05-15T09:03:57.556Z",
+    "price": "264.00",
+    "bbPosition": "8.47",
+    "smaSlope": "3.02",
+    "upperSlope": "3.55",
+    "weeklyChange": "18.39",
+    "updatedAt": "2026-05-18T03:19:48.252Z",
     "analysis": {
-      "score": 80,
-      "strategy": "穩健上漲",
+      "score": 90,
+      "strategy": "強勢噴發",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.73%），走得很穩。",
-        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 21.67%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
+        "🚀 **加速中**：均線斜率 3.02% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 18.39%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
   },
@@ -548,19 +477,19 @@
     "ticker": "1597",
     "name": "直得",
     "market": "Listed",
-    "price": "179.50",
-    "bbPosition": "5.01",
-    "smaSlope": "2.15",
-    "upperSlope": "1.66",
-    "weeklyChange": "3.76",
-    "updatedAt": "2026-05-15T09:03:58.658Z",
+    "price": "185.00",
+    "bbPosition": "5.33",
+    "smaSlope": "2.28",
+    "upperSlope": "1.74",
+    "weeklyChange": "1.65",
+    "updatedAt": "2026-05-18T03:19:49.358Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.15%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.28%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 3.76%，動能不錯。",
+        "📈 本週上漲 1.65%，動能不錯。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -570,16 +499,21 @@
     "ticker": "2233",
     "name": "宇隆",
     "market": "Listed",
-    "price": "295.00",
-    "bbPosition": "3.24",
-    "smaSlope": "1.16",
-    "upperSlope": "0.17",
-    "weeklyChange": "1.03",
-    "updatedAt": "2026-05-15T09:03:59.744Z",
+    "price": "315.00",
+    "bbPosition": "6.22",
+    "smaSlope": "1.51",
+    "upperSlope": "0.75",
+    "weeklyChange": "4.13",
+    "updatedAt": "2026-05-18T03:19:50.447Z",
     "analysis": {
-      "score": 0,
-      "strategy": "Neutral",
-      "reasons": []
+      "score": 80,
+      "strategy": "穩健上漲",
+      "reasons": [
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.51%），走得很穩。",
+        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
+        "📈 本週上漲 4.13%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+      ]
     }
   },
   {
@@ -587,19 +521,19 @@
     "ticker": "2454",
     "name": "聯發科",
     "market": "Listed",
-    "price": "3260.00",
-    "bbPosition": "3.18",
-    "smaSlope": "2.44",
-    "upperSlope": "0.32",
-    "weeklyChange": "-10.19",
-    "updatedAt": "2026-05-15T09:04:00.860Z",
+    "price": "3305.00",
+    "bbPosition": "3.16",
+    "smaSlope": "2.41",
+    "upperSlope": "0.08",
+    "weeklyChange": "-14.82",
+    "updatedAt": "2026-05-18T03:19:51.561Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.44%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.41%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 10.19%，正在回檔。",
+        "📉 本週下跌 14.82%，正在回檔。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -609,12 +543,12 @@
     "ticker": "2486",
     "name": "一詮",
     "market": "Listed",
-    "price": "249.00",
-    "bbPosition": "-0.14",
-    "smaSlope": "1.29",
-    "upperSlope": "-0.75",
-    "weeklyChange": "-11.55",
-    "updatedAt": "2026-05-15T09:04:01.958Z",
+    "price": "246.00",
+    "bbPosition": "-1.14",
+    "smaSlope": "1.22",
+    "upperSlope": "-1.18",
+    "weeklyChange": "-12.61",
+    "updatedAt": "2026-05-18T03:19:52.660Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -626,12 +560,12 @@
     "ticker": "3163",
     "name": "波若威",
     "market": "OTC",
-    "price": "950.00",
-    "bbPosition": "-8.93",
-    "smaSlope": "-0.82",
-    "upperSlope": "0.57",
-    "weeklyChange": "-5.94",
-    "updatedAt": "2026-05-15T09:04:03.047Z",
+    "price": "931.00",
+    "bbPosition": "-8.69",
+    "smaSlope": "-1.31",
+    "upperSlope": "-0.34",
+    "weeklyChange": "-10.48",
+    "updatedAt": "2026-05-18T03:19:53.745Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -644,11 +578,11 @@
     "name": "科嶠",
     "market": "OTC",
     "price": "205.00",
-    "bbPosition": "2.03",
-    "smaSlope": "0.86",
-    "upperSlope": "0.25",
-    "weeklyChange": "4.59",
-    "updatedAt": "2026-05-15T09:04:04.136Z",
+    "bbPosition": "1.68",
+    "smaSlope": "0.90",
+    "upperSlope": "0.06",
+    "weeklyChange": "5.40",
+    "updatedAt": "2026-05-18T03:19:54.838Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -660,21 +594,16 @@
     "ticker": "4764",
     "name": "雙鍵",
     "market": "Listed",
-    "price": "291.50",
-    "bbPosition": "2.01",
-    "smaSlope": "1.83",
-    "upperSlope": "-0.11",
-    "weeklyChange": "-14.26",
-    "updatedAt": "2026-05-15T09:04:05.221Z",
+    "price": "285.00",
+    "bbPosition": "1.01",
+    "smaSlope": "1.33",
+    "upperSlope": "-0.05",
+    "weeklyChange": "-11.21",
+    "updatedAt": "2026-05-18T03:19:55.925Z",
     "analysis": {
-      "score": 80,
-      "strategy": "穩健上漲",
-      "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.83%），走得很穩。",
-        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 14.26%，正在回檔。",
-        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
-      ]
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
     }
   },
   {
@@ -682,21 +611,16 @@
     "ticker": "4908",
     "name": "前鼎",
     "market": "OTC",
-    "price": "242.50",
-    "bbPosition": "5.33",
-    "smaSlope": "2.10",
-    "upperSlope": "0.37",
-    "weeklyChange": "5.66",
-    "updatedAt": "2026-05-15T09:04:06.318Z",
+    "price": "232.00",
+    "bbPosition": "3.09",
+    "smaSlope": "1.45",
+    "upperSlope": "0.11",
+    "weeklyChange": "1.98",
+    "updatedAt": "2026-05-18T03:19:57.120Z",
     "analysis": {
-      "score": 80,
-      "strategy": "穩健上漲",
-      "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.1%），走得很穩。",
-        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 5.66%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
-      ]
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
     }
   },
   {
@@ -704,12 +628,12 @@
     "ticker": "6683",
     "name": "雍智科技",
     "market": "OTC",
-    "price": "1735.00",
-    "bbPosition": "-6.39",
-    "smaSlope": "-0.38",
-    "upperSlope": "0.30",
-    "weeklyChange": "-21.49",
-    "updatedAt": "2026-05-15T09:04:07.407Z",
+    "price": "1625.00",
+    "bbPosition": "-7.88",
+    "smaSlope": "-0.60",
+    "upperSlope": "0.64",
+    "weeklyChange": "-28.41",
+    "updatedAt": "2026-05-18T03:19:58.206Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -721,19 +645,19 @@
     "ticker": "8064",
     "name": "東捷",
     "market": "OTC",
-    "price": "120.00",
-    "bbPosition": "6.08",
-    "smaSlope": "2.28",
-    "upperSlope": "1.43",
-    "weeklyChange": "15.94",
-    "updatedAt": "2026-05-15T09:04:08.503Z",
+    "price": "129.00",
+    "bbPosition": "7.89",
+    "smaSlope": "2.55",
+    "upperSlope": "2.42",
+    "weeklyChange": "13.66",
+    "updatedAt": "2026-05-18T03:19:59.295Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.28%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.55%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 15.94%，動能不錯。",
+        "📈 本週上漲 13.66%，動能不錯。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -743,12 +667,12 @@
     "ticker": "2426",
     "name": "鼎元",
     "market": "Listed",
-    "price": "61.90",
-    "bbPosition": "0.66",
-    "smaSlope": "0.72",
-    "upperSlope": "0.17",
-    "weeklyChange": "-8.30",
-    "updatedAt": "2026-05-15T09:04:09.609Z",
+    "price": "58.00",
+    "bbPosition": "-1.76",
+    "smaSlope": "0.30",
+    "upperSlope": "-0.02",
+    "weeklyChange": "-13.04",
+    "updatedAt": "2026-05-18T03:20:00.410Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -760,12 +684,12 @@
     "ticker": "3030",
     "name": "德律",
     "market": "Listed",
-    "price": "395.00",
-    "bbPosition": "3.62",
-    "smaSlope": "1.19",
-    "upperSlope": "0.20",
-    "weeklyChange": "1.41",
-    "updatedAt": "2026-05-15T09:04:10.711Z",
+    "price": "386.00",
+    "bbPosition": "2.09",
+    "smaSlope": "0.64",
+    "upperSlope": "0.31",
+    "weeklyChange": "-2.77",
+    "updatedAt": "2026-05-18T03:20:01.511Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -777,19 +701,19 @@
     "ticker": "3455",
     "name": "由田",
     "market": "OTC",
-    "price": "264.50",
-    "bbPosition": "2.16",
-    "smaSlope": "1.60",
+    "price": "268.50",
+    "bbPosition": "2.34",
+    "smaSlope": "1.52",
     "upperSlope": "-0.28",
-    "weeklyChange": "1.73",
-    "updatedAt": "2026-05-15T09:04:11.839Z",
+    "weeklyChange": "-6.12",
+    "updatedAt": "2026-05-18T03:20:02.601Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.6%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.52%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 1.73%，動能不錯。",
+        "📉 本週下跌 6.12%，正在回檔。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -799,21 +723,16 @@
     "ticker": "3581",
     "name": "博磊",
     "market": "OTC",
-    "price": "210.00",
-    "bbPosition": "2.85",
-    "smaSlope": "2.78",
-    "upperSlope": "-0.53",
-    "weeklyChange": "-10.64",
-    "updatedAt": "2026-05-15T09:04:12.954Z",
+    "price": "200.00",
+    "bbPosition": "1.15",
+    "smaSlope": "2.16",
+    "upperSlope": "-0.95",
+    "weeklyChange": "-15.43",
+    "updatedAt": "2026-05-18T03:20:03.688Z",
     "analysis": {
-      "score": 80,
-      "strategy": "穩健上漲",
-      "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.78%），走得很穩。",
-        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 10.64%，正在回檔。",
-        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
-      ]
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
     }
   },
   {
@@ -821,19 +740,19 @@
     "ticker": "4951",
     "name": "精拓科",
     "market": "OTC",
-    "price": "120.50",
-    "bbPosition": "2.64",
-    "smaSlope": "2.31",
-    "upperSlope": "0.24",
-    "weeklyChange": "-2.82",
-    "updatedAt": "2026-05-15T09:04:14.049Z",
+    "price": "121.50",
+    "bbPosition": "2.47",
+    "smaSlope": "2.28",
+    "upperSlope": "-0.06",
+    "weeklyChange": "0.00",
+    "updatedAt": "2026-05-18T03:20:04.781Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.31%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.28%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 2.82%，正在回檔。",
+        "↔️ 本週價格波動不大。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -843,12 +762,12 @@
     "ticker": "5386",
     "name": "青雲",
     "market": "OTC",
-    "price": "415.00",
-    "bbPosition": "1.17",
-    "smaSlope": "0.75",
-    "upperSlope": "0.20",
-    "weeklyChange": "-11.70",
-    "updatedAt": "2026-05-15T09:04:15.138Z",
+    "price": "448.00",
+    "bbPosition": "4.05",
+    "smaSlope": "1.19",
+    "upperSlope": "0.73",
+    "weeklyChange": "1.93",
+    "updatedAt": "2026-05-18T03:20:05.880Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -860,19 +779,19 @@
     "ticker": "6861",
     "name": "睿生光電",
     "market": "Listed",
-    "price": "451.00",
-    "bbPosition": "6.95",
-    "smaSlope": "4.92",
-    "upperSlope": "2.00",
-    "weeklyChange": "19.95",
-    "updatedAt": "2026-05-15T09:04:16.230Z",
+    "price": "448.00",
+    "bbPosition": "6.29",
+    "smaSlope": "4.43",
+    "upperSlope": "1.22",
+    "weeklyChange": "15.17",
+    "updatedAt": "2026-05-18T03:20:06.961Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 4.92%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 4.43%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 19.95%，動能不錯。",
+        "📈 本週上漲 15.17%，動能不錯。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -882,19 +801,19 @@
     "ticker": "1595",
     "name": "川寶",
     "market": "OTC",
-    "price": "85.00",
-    "bbPosition": "2.94",
-    "smaSlope": "2.17",
-    "upperSlope": "0.46",
-    "weeklyChange": "-13.44",
-    "updatedAt": "2026-05-15T09:04:17.317Z",
+    "price": "88.40",
+    "bbPosition": "3.58",
+    "smaSlope": "2.38",
+    "upperSlope": "0.42",
+    "weeklyChange": "-6.06",
+    "updatedAt": "2026-05-18T03:20:08.055Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.17%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.38%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 13.44%，正在回檔。",
+        "📉 本週下跌 6.06%，正在回檔。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -904,12 +823,12 @@
     "ticker": "3532",
     "name": "台勝科",
     "market": "Listed",
-    "price": "221.50",
-    "bbPosition": "1.14",
-    "smaSlope": "0.65",
-    "upperSlope": "0.34",
-    "weeklyChange": "-13.98",
-    "updatedAt": "2026-05-15T09:04:18.430Z",
+    "price": "210.00",
+    "bbPosition": "-0.68",
+    "smaSlope": "0.50",
+    "upperSlope": "0.05",
+    "weeklyChange": "-21.64",
+    "updatedAt": "2026-05-18T03:20:09.167Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -921,12 +840,12 @@
     "ticker": "4991",
     "name": "環宇-KY",
     "market": "OTC",
-    "price": "642.00",
-    "bbPosition": "-3.32",
-    "smaSlope": "0.31",
-    "upperSlope": "-0.30",
-    "weeklyChange": "-0.31",
-    "updatedAt": "2026-05-15T09:04:19.510Z",
+    "price": "635.00",
+    "bbPosition": "-3.87",
+    "smaSlope": "-0.19",
+    "upperSlope": "0.01",
+    "weeklyChange": "-7.43",
+    "updatedAt": "2026-05-18T03:20:10.246Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -938,12 +857,12 @@
     "ticker": "6274",
     "name": "台燿",
     "market": "OTC",
-    "price": "1305.00",
-    "bbPosition": "3.33",
-    "smaSlope": "1.50",
-    "upperSlope": "0.83",
-    "weeklyChange": "-4.74",
-    "updatedAt": "2026-05-15T09:04:20.601Z",
+    "price": "1215.00",
+    "bbPosition": "0.86",
+    "smaSlope": "1.15",
+    "upperSlope": "0.07",
+    "weeklyChange": "-16.49",
+    "updatedAt": "2026-05-18T03:20:11.446Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -955,19 +874,19 @@
     "ticker": "6405",
     "name": "悅城",
     "market": "Listed",
-    "price": "58.50",
-    "bbPosition": "4.34",
-    "smaSlope": "2.34",
-    "upperSlope": "1.13",
-    "weeklyChange": "-9.16",
-    "updatedAt": "2026-05-15T09:04:21.698Z",
+    "price": "54.90",
+    "bbPosition": "2.27",
+    "smaSlope": "1.86",
+    "upperSlope": "0.26",
+    "weeklyChange": "-5.34",
+    "updatedAt": "2026-05-18T03:20:12.533Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.34%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.86%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 9.16%，正在回檔。",
+        "📉 本週下跌 5.34%，正在回檔。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -977,19 +896,19 @@
     "ticker": "3016",
     "name": "嘉晶",
     "market": "Listed",
-    "price": "111.00",
-    "bbPosition": "3.58",
-    "smaSlope": "2.63",
-    "upperSlope": "0.79",
-    "weeklyChange": "-5.13",
-    "updatedAt": "2026-05-15T09:04:22.792Z",
+    "price": "109.00",
+    "bbPosition": "2.77",
+    "smaSlope": "2.43",
+    "upperSlope": "0.27",
+    "weeklyChange": "-15.18",
+    "updatedAt": "2026-05-18T03:20:13.629Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.63%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.43%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 5.13%，正在回檔。",
+        "📉 本週下跌 15.18%，正在回檔。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -999,16 +918,21 @@
     "ticker": "4561",
     "name": "健椿",
     "market": "OTC",
-    "price": "48.10",
-    "bbPosition": "5.10",
-    "smaSlope": "1.31",
-    "upperSlope": "1.53",
-    "weeklyChange": "-6.42",
-    "updatedAt": "2026-05-15T09:04:23.881Z",
+    "price": "49.50",
+    "bbPosition": "5.54",
+    "smaSlope": "1.56",
+    "upperSlope": "1.70",
+    "weeklyChange": "-4.07",
+    "updatedAt": "2026-05-18T03:20:14.713Z",
     "analysis": {
-      "score": 0,
-      "strategy": "Neutral",
-      "reasons": []
+      "score": 80,
+      "strategy": "穩健上漲",
+      "reasons": [
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.56%），走得很穩。",
+        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
+        "📉 本週下跌 4.07%，正在回檔。",
+        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+      ]
     }
   },
   {
@@ -1016,19 +940,19 @@
     "ticker": "6182",
     "name": "合晶",
     "market": "OTC",
-    "price": "55.20",
-    "bbPosition": "5.32",
-    "smaSlope": "1.97",
-    "upperSlope": "1.25",
-    "weeklyChange": "-2.99",
-    "updatedAt": "2026-05-15T09:04:24.981Z",
+    "price": "53.40",
+    "bbPosition": "3.73",
+    "smaSlope": "1.87",
+    "upperSlope": "0.28",
+    "weeklyChange": "-8.87",
+    "updatedAt": "2026-05-18T03:20:15.807Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.97%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.87%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 2.99%，正在回檔。",
+        "📉 本週下跌 8.87%，正在回檔。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -1038,12 +962,12 @@
     "ticker": "6488",
     "name": "環球晶",
     "market": "OTC",
-    "price": "710.00",
-    "bbPosition": "2.52",
-    "smaSlope": "1.31",
-    "upperSlope": "0.42",
-    "weeklyChange": "-11.47",
-    "updatedAt": "2026-05-15T09:04:26.068Z",
+    "price": "679.00",
+    "bbPosition": "0.60",
+    "smaSlope": "1.32",
+    "upperSlope": "-0.46",
+    "weeklyChange": "-18.68",
+    "updatedAt": "2026-05-18T03:20:16.892Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -1055,19 +979,19 @@
     "ticker": "8227",
     "name": "巨有科技",
     "market": "OTC",
-    "price": "208.00",
-    "bbPosition": "5.69",
-    "smaSlope": "2.07",
-    "upperSlope": "1.12",
-    "weeklyChange": "-5.02",
-    "updatedAt": "2026-05-15T09:04:27.405Z",
+    "price": "201.50",
+    "bbPosition": "4.04",
+    "smaSlope": "1.70",
+    "upperSlope": "0.51",
+    "weeklyChange": "-10.84",
+    "updatedAt": "2026-05-18T03:20:17.970Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.07%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.7%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 5.02%，正在回檔。",
+        "📉 本週下跌 10.84%，正在回檔。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -1077,19 +1001,19 @@
     "ticker": "1809",
     "name": "中釉",
     "market": "Listed",
-    "price": "38.60",
-    "bbPosition": "6.58",
-    "smaSlope": "1.86",
-    "upperSlope": "2.28",
-    "weeklyChange": "7.22",
-    "updatedAt": "2026-05-15T09:04:28.513Z",
+    "price": "36.95",
+    "bbPosition": "4.59",
+    "smaSlope": "1.55",
+    "upperSlope": "1.32",
+    "weeklyChange": "-6.69",
+    "updatedAt": "2026-05-18T03:20:19.071Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.86%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.55%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 7.22%，動能不錯。",
+        "📉 本週下跌 6.69%，正在回檔。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -1099,21 +1023,16 @@
     "ticker": "2059",
     "name": "川湖",
     "market": "Listed",
-    "price": "4860.00",
-    "bbPosition": "3.85",
-    "smaSlope": "1.65",
-    "upperSlope": "0.55",
-    "weeklyChange": "-8.65",
-    "updatedAt": "2026-05-15T09:04:29.613Z",
+    "price": "4595.00",
+    "bbPosition": "1.44",
+    "smaSlope": "1.09",
+    "upperSlope": "0.10",
+    "weeklyChange": "-16.76",
+    "updatedAt": "2026-05-18T03:20:20.163Z",
     "analysis": {
-      "score": 80,
-      "strategy": "穩健上漲",
-      "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.65%），走得很穩。",
-        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 8.65%，正在回檔。",
-        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
-      ]
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
     }
   },
   {
@@ -1121,12 +1040,12 @@
     "ticker": "3450",
     "name": "聯鈞",
     "market": "Listed",
-    "price": "395.50",
-    "bbPosition": "2.91",
-    "smaSlope": "0.75",
-    "upperSlope": "0.65",
-    "weeklyChange": "-3.54",
-    "updatedAt": "2026-05-15T09:04:30.848Z",
+    "price": "406.50",
+    "bbPosition": "3.77",
+    "smaSlope": "0.55",
+    "upperSlope": "0.76",
+    "weeklyChange": "-5.02",
+    "updatedAt": "2026-05-18T03:20:21.259Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -1138,12 +1057,12 @@
     "ticker": "3653",
     "name": "健策",
     "market": "Listed",
-    "price": "3465.00",
-    "bbPosition": "-7.68",
-    "smaSlope": "-0.98",
-    "upperSlope": "0.72",
-    "weeklyChange": "-5.07",
-    "updatedAt": "2026-05-15T09:04:31.946Z",
+    "price": "3200.00",
+    "bbPosition": "-8.33",
+    "smaSlope": "-1.48",
+    "upperSlope": "0.87",
+    "weeklyChange": "-20.30",
+    "updatedAt": "2026-05-18T03:20:22.358Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -1155,12 +1074,12 @@
     "ticker": "3664",
     "name": "安瑞-KY",
     "market": "OTC",
-    "price": "9.23",
-    "bbPosition": "5.73",
-    "smaSlope": "1.14",
-    "upperSlope": "1.86",
-    "weeklyChange": "18.18",
-    "updatedAt": "2026-05-15T09:04:33.020Z",
+    "price": "8.31",
+    "bbPosition": "2.62",
+    "smaSlope": "0.65",
+    "upperSlope": "0.67",
+    "weeklyChange": "-3.26",
+    "updatedAt": "2026-05-18T03:20:23.438Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -1173,33 +1092,11 @@
     "name": "華星光",
     "market": "OTC",
     "price": "531.00",
-    "bbPosition": "-8.67",
-    "smaSlope": "-0.44",
-    "upperSlope": "0.61",
-    "weeklyChange": "-19.55",
-    "updatedAt": "2026-05-15T09:04:34.117Z",
-    "analysis": {
-      "score": 70,
-      "strategy": "跌深反彈",
-      "reasons": [
-        "🆘 **嚴重超跌**：股價已經跌破了近期的正常範圍（布林下軌），通常會有人想進場撿便宜。",
-        "🛑 **跌勢止住**：雖然之前在跌，但目前趨勢已經開始走平，不再劇烈重挫。",
-        "📉 本週下跌 19.55%，正在回檔。",
-        "💡 **白話解釋**：這支股票「跌過頭了」，隨時可能像皮球掉到地上後彈起來。"
-      ]
-    }
-  },
-  {
-    "symbol": "7751.TWO",
-    "ticker": "7751",
-    "name": "竑騰",
-    "market": "OTC",
-    "price": "1625.00",
-    "bbPosition": "-7.16",
-    "smaSlope": "-0.51",
-    "upperSlope": "0.51",
-    "weeklyChange": "-16.24",
-    "updatedAt": "2026-05-15T09:04:35.198Z",
+    "bbPosition": "-7.67",
+    "smaSlope": "-0.90",
+    "upperSlope": "0.25",
+    "weeklyChange": "-20.98",
+    "updatedAt": "2026-05-18T03:20:24.523Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -1211,19 +1108,19 @@
     "ticker": "5464",
     "name": "霖宏",
     "market": "OTC",
-    "price": "57.10",
-    "bbPosition": "6.39",
-    "smaSlope": "3.38",
-    "upperSlope": "2.99",
-    "weeklyChange": "8.97",
-    "updatedAt": "2026-05-15T09:04:36.340Z",
+    "price": "58.80",
+    "bbPosition": "6.37",
+    "smaSlope": "3.45",
+    "upperSlope": "2.88",
+    "weeklyChange": "2.08",
+    "updatedAt": "2026-05-18T03:20:25.637Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 3.38%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 3.45%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 8.97%，動能不錯。",
+        "📈 本週上漲 2.08%，動能不錯。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -1234,18 +1131,18 @@
     "name": "鴻勁",
     "market": "Listed",
     "price": "6895.00",
-    "bbPosition": "6.90",
-    "smaSlope": "2.39",
-    "upperSlope": "2.11",
-    "weeklyChange": "18.88",
-    "updatedAt": "2026-05-15T09:04:37.416Z",
+    "bbPosition": "6.22",
+    "smaSlope": "2.15",
+    "upperSlope": "1.82",
+    "weeklyChange": "8.07",
+    "updatedAt": "2026-05-18T03:20:26.717Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.39%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.15%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 18.88%，動能不錯。",
+        "📈 本週上漲 8.07%，動能不錯。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -1255,19 +1152,19 @@
     "ticker": "8042",
     "name": "金山電",
     "market": "OTC",
-    "price": "98.10",
-    "bbPosition": "6.93",
-    "smaSlope": "2.20",
-    "upperSlope": "3.05",
-    "weeklyChange": "16.65",
-    "updatedAt": "2026-05-15T09:04:38.510Z",
+    "price": "101.50",
+    "bbPosition": "7.05",
+    "smaSlope": "2.37",
+    "upperSlope": "3.20",
+    "weeklyChange": "14.17",
+    "updatedAt": "2026-05-18T03:20:27.814Z",
     "analysis": {
       "score": 80,
       "strategy": "穩健上漲",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.2%），走得很穩。",
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.37%），走得很穩。",
         "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📈 本週上漲 16.65%，動能不錯。",
+        "📈 本週上漲 14.17%，動能不錯。",
         "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
@@ -1277,19 +1174,19 @@
     "ticker": "2492",
     "name": "華新科",
     "market": "Listed",
-    "price": "206.00",
-    "bbPosition": "9.45",
-    "smaSlope": "1.88",
-    "upperSlope": "4.01",
-    "weeklyChange": "32.05",
-    "updatedAt": "2026-05-15T09:04:39.617Z",
+    "price": "213.50",
+    "bbPosition": "9.29",
+    "smaSlope": "2.13",
+    "upperSlope": "4.17",
+    "weeklyChange": "24.49",
+    "updatedAt": "2026-05-18T03:20:28.917Z",
     "analysis": {
       "score": 90,
       "strategy": "強勢噴發",
       "reasons": [
         "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 1.88% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 32.05%，動能不錯。",
+        "🚀 **加速中**：均線斜率 2.13% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 24.49%，動能不錯。",
         "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
@@ -1299,20 +1196,20 @@
     "ticker": "3026",
     "name": "禾伸堂",
     "market": "Listed",
-    "price": "327.00",
-    "bbPosition": "6.25",
-    "smaSlope": "1.64",
-    "upperSlope": "2.17",
-    "weeklyChange": "-0.91",
-    "updatedAt": "2026-05-15T09:04:40.712Z",
+    "price": "355.00",
+    "bbPosition": "8.07",
+    "smaSlope": "2.27",
+    "upperSlope": "3.28",
+    "weeklyChange": "7.74",
+    "updatedAt": "2026-05-18T03:20:30.021Z",
     "analysis": {
-      "score": 80,
-      "strategy": "穩健上漲",
+      "score": 90,
+      "strategy": "強勢噴發",
       "reasons": [
-        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.64%），走得很穩。",
-        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
-        "📉 本週下跌 0.91%，正在回檔。",
-        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
+        "🚀 **加速中**：均線斜率 2.27% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 7.74%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
   },
@@ -1321,20 +1218,20 @@
     "ticker": "4966",
     "name": "譜瑞-KY",
     "market": "OTC",
-    "price": "800.00",
-    "bbPosition": "8.81",
-    "smaSlope": "1.97",
-    "upperSlope": "3.18",
-    "weeklyChange": "19.58",
-    "updatedAt": "2026-05-15T09:04:41.815Z",
+    "price": "766.00",
+    "bbPosition": "6.28",
+    "smaSlope": "1.73",
+    "upperSlope": "1.76",
+    "weeklyChange": "4.22",
+    "updatedAt": "2026-05-18T03:20:31.117Z",
     "analysis": {
-      "score": 90,
-      "strategy": "強勢噴發",
+      "score": 80,
+      "strategy": "穩健上漲",
       "reasons": [
-        "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 1.97% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 19.58%，動能不錯。",
-        "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 1.73%），走得很穩。",
+        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
+        "📈 本週上漲 4.22%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
       ]
     }
   },
@@ -1343,19 +1240,19 @@
     "ticker": "6173",
     "name": "信昌電",
     "market": "OTC",
-    "price": "155.00",
-    "bbPosition": "8.18",
-    "smaSlope": "3.45",
-    "upperSlope": "4.53",
-    "weeklyChange": "27.05",
-    "updatedAt": "2026-05-15T09:04:42.916Z",
+    "price": "164.50",
+    "bbPosition": "8.50",
+    "smaSlope": "3.39",
+    "upperSlope": "5.01",
+    "weeklyChange": "22.76",
+    "updatedAt": "2026-05-18T03:20:32.223Z",
     "analysis": {
       "score": 90,
       "strategy": "強勢噴發",
       "reasons": [
         "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 3.45% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 27.05%，動能不錯。",
+        "🚀 **加速中**：均線斜率 3.39% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 22.76%，動能不錯。",
         "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
@@ -1365,12 +1262,12 @@
     "ticker": "6263",
     "name": "普萊德",
     "market": "OTC",
-    "price": "171.00",
-    "bbPosition": "5.88",
-    "smaSlope": "1.33",
-    "upperSlope": "1.29",
-    "weeklyChange": "11.76",
-    "updatedAt": "2026-05-15T09:04:44.009Z",
+    "price": "170.50",
+    "bbPosition": "5.20",
+    "smaSlope": "1.30",
+    "upperSlope": "0.99",
+    "weeklyChange": "1.49",
+    "updatedAt": "2026-05-18T03:20:33.321Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -1382,19 +1279,19 @@
     "ticker": "6831",
     "name": "邁科",
     "market": "Listed",
-    "price": "725.00",
-    "bbPosition": "10.96",
-    "smaSlope": "2.75",
-    "upperSlope": "4.29",
-    "weeklyChange": "34.26",
-    "updatedAt": "2026-05-15T09:04:45.081Z",
+    "price": "695.00",
+    "bbPosition": "8.01",
+    "smaSlope": "2.01",
+    "upperSlope": "2.75",
+    "weeklyChange": "17.00",
+    "updatedAt": "2026-05-18T03:20:34.394Z",
     "analysis": {
       "score": 90,
       "strategy": "強勢噴發",
       "reasons": [
         "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 2.75% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 34.26%，動能不錯。",
+        "🚀 **加速中**：均線斜率 2.01% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 17%，動能不錯。",
         "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
@@ -1404,19 +1301,19 @@
     "ticker": "8069",
     "name": "元太",
     "market": "OTC",
-    "price": "210.00",
-    "bbPosition": "8.87",
-    "smaSlope": "1.73",
-    "upperSlope": "3.55",
-    "weeklyChange": "29.63",
-    "updatedAt": "2026-05-15T09:04:46.315Z",
+    "price": "214.00",
+    "bbPosition": "8.38",
+    "smaSlope": "1.82",
+    "upperSlope": "3.41",
+    "weeklyChange": "20.22",
+    "updatedAt": "2026-05-18T03:20:35.582Z",
     "analysis": {
       "score": 90,
       "strategy": "強勢噴發",
       "reasons": [
         "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 1.73% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 29.63%，動能不錯。",
+        "🚀 **加速中**：均線斜率 1.82% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 20.22%，動能不錯。",
         "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
@@ -1426,12 +1323,12 @@
     "ticker": "8114",
     "name": "振樺電",
     "market": "Listed",
-    "price": "216.00",
-    "bbPosition": "4.44",
-    "smaSlope": "1.16",
-    "upperSlope": "0.81",
-    "weeklyChange": "8.82",
-    "updatedAt": "2026-05-15T09:04:47.415Z",
+    "price": "209.00",
+    "bbPosition": "2.53",
+    "smaSlope": "0.89",
+    "upperSlope": "0.36",
+    "weeklyChange": "-4.13",
+    "updatedAt": "2026-05-18T03:20:36.684Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
@@ -1443,19 +1340,19 @@
     "ticker": "8291",
     "name": "尚茂",
     "market": "OTC",
-    "price": "56.80",
-    "bbPosition": "10.82",
-    "smaSlope": "8.67",
-    "upperSlope": "10.55",
-    "weeklyChange": "60.45",
-    "updatedAt": "2026-05-15T09:04:48.500Z",
+    "price": "62.40",
+    "bbPosition": "10.71",
+    "smaSlope": "9.01",
+    "upperSlope": "10.40",
+    "weeklyChange": "60.41",
+    "updatedAt": "2026-05-18T03:20:37.767Z",
     "analysis": {
       "score": 90,
       "strategy": "強勢噴發",
       "reasons": [
         "🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。",
-        "🚀 **加速中**：均線斜率 8.67% 代表趨勢正向上加速，不容易馬上回頭。",
-        "📈 本週上漲 60.45%，動能不錯。",
+        "🚀 **加速中**：均線斜率 9.01% 代表趨勢正向上加速，不容易馬上回頭。",
+        "📈 本週上漲 60.41%，動能不錯。",
         "💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。"
       ]
     }
@@ -1465,16 +1362,116 @@
     "ticker": "8358",
     "name": "金居",
     "market": "OTC",
-    "price": "389.50",
-    "bbPosition": "-2.29",
-    "smaSlope": "0.68",
-    "upperSlope": "-0.61",
-    "weeklyChange": "-14.30",
-    "updatedAt": "2026-05-15T09:04:49.590Z",
+    "price": "400.00",
+    "bbPosition": "-1.26",
+    "smaSlope": "0.40",
+    "upperSlope": "-0.08",
+    "weeklyChange": "-13.42",
+    "updatedAt": "2026-05-18T03:20:38.870Z",
     "analysis": {
       "score": 0,
       "strategy": "Neutral",
       "reasons": []
+    }
+  },
+  {
+    "symbol": "3135.TW",
+    "ticker": "3135",
+    "name": "凌航",
+    "market": "Listed",
+    "price": "205.50",
+    "bbPosition": "6.01",
+    "smaSlope": "2.70",
+    "upperSlope": "1.86",
+    "weeklyChange": "5.66",
+    "updatedAt": "2026-05-18T03:20:39.948Z",
+    "analysis": {
+      "score": 80,
+      "strategy": "穩健上漲",
+      "reasons": [
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.7%），走得很穩。",
+        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
+        "📈 本週上漲 5.66%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+      ]
+    }
+  },
+  {
+    "symbol": "5228.TWO",
+    "ticker": "5228",
+    "name": "鈺鎧",
+    "market": "OTC",
+    "price": "44.25",
+    "bbPosition": "5.00",
+    "smaSlope": "0.95",
+    "upperSlope": "1.39",
+    "weeklyChange": "6.12",
+    "updatedAt": "2026-05-18T03:20:41.029Z",
+    "analysis": {
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "6829.TWO",
+    "ticker": "6829",
+    "name": "千附精密",
+    "market": "OTC",
+    "price": "184.50",
+    "bbPosition": "-9.99",
+    "smaSlope": "-0.26",
+    "upperSlope": "0.57",
+    "weeklyChange": "-18.18",
+    "updatedAt": "2026-05-18T03:20:42.112Z",
+    "analysis": {
+      "score": 70,
+      "strategy": "跌深反彈",
+      "reasons": [
+        "🆘 **嚴重超跌**：股價已經跌破了近期的正常範圍（布林下軌），通常會有人想進場撿便宜。",
+        "🛑 **跌勢止住**：雖然之前在跌，但目前趨勢已經開始走平，不再劇烈重挫。",
+        "📉 本週下跌 18.18%，正在回檔。",
+        "💡 **白話解釋**：這支股票「跌過頭了」，隨時可能像皮球掉到地上後彈起來。"
+      ]
+    }
+  },
+  {
+    "symbol": "7751.TWO",
+    "ticker": "7751",
+    "name": "竑騰",
+    "market": "OTC",
+    "price": "1720.00",
+    "bbPosition": "-5.63",
+    "smaSlope": "-0.41",
+    "upperSlope": "0.25",
+    "weeklyChange": "-1.71",
+    "updatedAt": "2026-05-18T03:20:43.189Z",
+    "analysis": {
+      "score": 0,
+      "strategy": "Neutral",
+      "reasons": []
+    }
+  },
+  {
+    "symbol": "8444.TWO",
+    "ticker": "8444",
+    "name": "綠河-KY",
+    "market": "OTC",
+    "price": "8.20",
+    "bbPosition": "6.98",
+    "smaSlope": "2.44",
+    "upperSlope": "2.73",
+    "weeklyChange": "14.69",
+    "updatedAt": "2026-05-18T03:20:44.273Z",
+    "analysis": {
+      "score": 80,
+      "strategy": "穩健上漲",
+      "reasons": [
+        "✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 2.44%），走得很穩。",
+        "🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。",
+        "📈 本週上漲 14.69%，動能不錯。",
+        "💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。"
+      ]
     }
   }
 ]
