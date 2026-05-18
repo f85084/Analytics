@@ -60,11 +60,28 @@ function calculateSD(prices, period, sma) {
     return Math.sqrt(avgSqDiff);
 }
 
+function calculateRSI(prices, period = 14) {
+    if (prices.length < period + 1) return null;
+    let gains = 0;
+    let losses = 0;
+    // Prices are descending (0 is current)
+    for (let i = 0; i < period; i++) {
+        const diff = prices[i] - prices[i + 1];
+        if (diff >= 0) gains += diff;
+        else losses -= diff;
+    }
+    if (losses === 0) return 100;
+    const rs = (gains / period) / (losses / period);
+    return 100 - (100 / (1 + rs));
+}
+
 function analyzeStock(m) {
     const bb = parseFloat(m.bbPosition);
     const smaSlope = parseFloat(m.smaSlope);
     const upperSlope = parseFloat(m.upperSlope);
     const weeklyChange = parseFloat(m.weeklyChange);
+    const rsi = parseFloat(m.rsi);
+    const volRatio = parseFloat(m.volRatio);
     
     let recommendation = { score: 0, strategy: 'Neutral', reasons: [] };
 
@@ -72,16 +89,26 @@ function analyzeStock(m) {
         ? `📈 本週上漲 ${weeklyChange}%，動能不錯。` 
         : (weeklyChange < 0 ? `📉 本週下跌 ${Math.abs(weeklyChange)}%，正在回檔。` : '↔️ 本週價格波動不大。');
 
-    // Strategy A: Breakout
+    const rsiText = rsi > 70 ? `⚠️ RSI 為 ${rsi}，指標顯示進入「過熱區」，追高請小心。` 
+                  : (rsi < 30 ? `🔵 RSI 為 ${rsi}，指標顯示進入「超賣區」，反彈機率高。` : `✅ RSI 為 ${rsi}，動能穩定。`);
+    
+    const volText = volRatio > 1.5 ? `📊 成交量放大至均量的 ${volRatio} 倍，顯示有大金主在裡面。` : `📊 成交量平穩 (均量的 ${volRatio} 倍)。`;
+
+    // Strategy A: Breakout (Stronger requirements now)
     if (bb > 8 && smaSlope > 1 && upperSlope > 2) {
+        let score = 90;
+        if (rsi > 80) score -= 10; // Penalty for extreme heat
+        if (volRatio > 1.2) score += 5; // Bonus for volume confirmation
+
         recommendation = {
-            score: 90,
+            score: Math.min(100, score),
             strategy: '強勢噴發',
             reasons: [
                 `🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。`,
-                `🚀 **加速中**：均線斜率 ${smaSlope}% 代表趨勢正向上加速，不容易馬上回頭。`,
-                weeklyText,
-                `💡 **白話解釋**：這支股票現在「非常有活力」，就像正在起飛的火箭。`
+                `🚀 **加速中**：均線斜率 ${smaSlope}% 代表趨勢正向上加速。`,
+                volText,
+                rsiText,
+                `💡 **白話解釋**：這支股票就像正在噴發的火山，動能極強，但也要注意不要追在最高點。`
             ]
         };
     } 
@@ -91,10 +118,11 @@ function analyzeStock(m) {
             score: 80,
             strategy: '穩健上漲',
             reasons: [
-                `✅ **趨勢穩定**：20天來的平均成本一直往上墊高（均線斜率 ${smaSlope}%），走得很穩。`,
-                `🛡️ **安全區間**：股價沒有過熱，還在合理的漲幅範圍內。`,
+                `✅ **趨勢穩定**：20天平均成本持續墊高（均線斜率 ${smaSlope}%），走勢健康。`,
+                `🛡️ **安全區間**：股價未過熱，且成交量配合良好。`,
                 weeklyText,
-                `💡 **白話解釋**：這支股票現在走得很健康，「步步高升」，適合順著趨勢看下去。`
+                rsiText,
+                `💡 **白話解釋**：股票走得很穩，「步步高升」，是適合中長期觀察的標的。`
             ]
         };
     }
@@ -104,10 +132,10 @@ function analyzeStock(m) {
             score: 70,
             strategy: '跌深反彈',
             reasons: [
-                `🆘 **嚴重超跌**：股價已經跌破了近期的正常範圍（布林下軌），通常會有人想進場撿便宜。`,
-                `🛑 **跌勢止住**：雖然之前在跌，但目前趨勢已經開始走平，不再劇烈重挫。`,
+                `🆘 **嚴重超跌**：股價已跌破近期正常範圍，RSI (${rsi}) 也偏低，隨時可能反彈。`,
+                `🛑 **跌勢止住**：均線下行趨勢顯著緩和，賣壓趨於竭盡。`,
                 weeklyText,
-                `💡 **白話解釋**：這支股票「跌過頭了」，隨時可能像皮球掉到地上後彈起來。`
+                `💡 **白話解釋**：這支股票像被壓扁的皮球，底部支撐轉強，有機會出現技術性反彈。`
             ]
         };
     }
@@ -132,6 +160,7 @@ async function getMetrics(stock) {
 
         const sorted = history.sort((a, b) => new Date(b.date) - new Date(a.date));
         const prices = sorted.map(h => h.close);
+        const volumes = sorted.map(h => h.volume);
 
         const sma20 = calculateSMA(prices, 20);
         const sd20 = calculateSD(prices, 20, sma20);
@@ -161,6 +190,10 @@ async function getMetrics(stock) {
             weeklyChange = ((currentPrice - price5DaysAgo) / price5DaysAgo) * 100;
         }
 
+        const rsi = calculateRSI(prices, 14);
+        const avgVol5 = calculateSMA(volumes.slice(1), 5);
+        const volRatio = avgVol5 ? (volumes[0] / avgVol5) : 1;
+
         const metrics = {
             ...stock,
             price: current.toFixed(2),
@@ -168,6 +201,8 @@ async function getMetrics(stock) {
             smaSlope: smaSlope.toFixed(2),
             upperSlope: upperSlope.toFixed(2),
             weeklyChange: weeklyChange.toFixed(2),
+            rsi: rsi ? rsi.toFixed(2) : 'N/A',
+            volRatio: volRatio.toFixed(2),
             updatedAt: new Date().toISOString()
         };
         
