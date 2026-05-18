@@ -228,7 +228,12 @@
         <p class="subtitle">根據布林通道與均線斜率進行的大數據分析推薦</p>
     </header>
 
-    <div class="last-updated">最後更新: <span id="last-updated-time">-</span></div>
+    <div class="last-updated">
+        最後更新: <span id="last-updated-time">-</span>
+        <button class="btn" style="display: inline-flex; margin-left: 10px; padding: 4px 10px;" onclick="triggerUpdate()">
+            🔄 執行更新數據
+        </button>
+    </div>
 
     <!-- Portfolio Section -->
     <div id="portfolio-section" class="portfolio-section" style="display: none;">
@@ -387,6 +392,15 @@
             const modal = document.getElementById('chart-modal');
             if (event.target == modal) {
                 closeChart();
+            }
+        }
+
+        async function triggerUpdate() {
+            if (confirm('是否要通知 AI 助手執行數據更新任務？\n(這將會抓取最新股市數據並重新整理頁面)')) {
+                // Since this is a static page, we simulate the request.
+                // In a real environment, this could call a GitHub Action API or a local backend.
+                alert('🚀 請在對話框中對我說：「執行更新數據」，我將立刻為您更新！\n\n(如果您已設定 GitHub Actions，也可以點擊該頁面手動觸發)');
+                window.open('https://github.com/f85084/Analytics/actions', '_blank');
             }
         }
 
