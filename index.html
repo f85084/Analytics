@@ -153,6 +153,42 @@
         .empty-state { text-align: center; grid-column: 1 / -1; padding: 40px; color: var(--secondary); }
         .last-updated { text-align: center; margin-bottom: 20px; font-size: 0.8em; color: var(--secondary); }
 
+        /* Portfolio Styles */
+        .portfolio-section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        .portfolio-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        .portfolio-card {
+            padding: 15px;
+            border: 1px solid #f1f5f9;
+            background: #f8fafc;
+            border-radius: 10px;
+            position: relative;
+        }
+        .portfolio-card .sell-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: none;
+            border: none;
+            color: var(--secondary);
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .portfolio-card .sell-btn:hover { color: var(--danger); }
+        .p-ticker { font-weight: bold; color: #1e293b; }
+        .p-profit { font-weight: bold; margin-top: 5px; }
+
         /* Modal Styles */
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
         .modal-content { position: relative; background: #fff; margin: 2% auto; padding: 10px; width: 90%; height: 90%; border-radius: 12px; overflow: hidden; }
@@ -180,8 +216,11 @@
             font-family: inherit;
         }
         .btn:hover { background: #f8fafc; border-color: var(--primary); color: var(--primary); }
+        .btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
+        .btn-primary:hover { background: #1d4ed8; color: white; }
     </style>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body>
     <header>
@@ -190,6 +229,17 @@
     </header>
 
     <div class="last-updated">最後更新: <span id="last-updated-time">-</span></div>
+
+    <!-- Portfolio Section -->
+    <div id="portfolio-section" class="portfolio-section" style="display: none;">
+        <div class="portfolio-header">
+            <h3 style="margin: 0;">💰 我的模擬投資組合 (雲端同步)</h3>
+            <span id="total-profit" style="font-weight: bold;">總盈虧: -</span>
+        </div>
+        <div id="portfolio-grid" class="portfolio-grid">
+            <!-- Portfolio items here -->
+        </div>
+    </div>
 
     <div class="filters">
         <button class="filter-btn active" onclick="filterData('all')">全部股票</button>
@@ -214,6 +264,97 @@
     <script>
         let allData = [];
         let currentFilter = 'all';
+
+        // Supabase Configuration (Replace with your own)
+        const SUPABASE_URL = ''; 
+        const SUPABASE_ANON_KEY = '';
+        let supabaseClient = null;
+
+        if (SUPABASE_URL && SUPABASE_ANON_KEY) {
+            supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        }
+
+        async function mockBuy(ticker, name, price) {
+            const position = {
+                ticker,
+                name,
+                buy_price: parseFloat(price),
+                buy_date: new Date().toISOString(),
+                quantity: 1
+            };
+
+            if (supabaseClient) {
+                const { error } = await supabaseClient.from('mock_portfolio').insert([position]);
+                if (error) console.error('Error buying stock:', error);
+            } else {
+                // Fallback to LocalStorage
+                let portfolio = JSON.parse(localStorage.getItem('mock_portfolio') || '[]');
+                portfolio.push(position);
+                localStorage.setItem('mock_portfolio', JSON.stringify(portfolio));
+            }
+            alert(`✅ 已模擬買入 ${name} (${ticker})，買入價: $${price}`);
+            loadPortfolio();
+        }
+
+        async function sellStock(id, ticker) {
+            if (!confirm(`確定要賣出 ${ticker} 嗎？`)) return;
+
+            if (supabaseClient) {
+                const { error } = await supabaseClient.from('mock_portfolio').delete().eq('id', id);
+                if (error) console.error('Error selling stock:', error);
+            } else {
+                let portfolio = JSON.parse(localStorage.getItem('mock_portfolio') || '[]');
+                portfolio = portfolio.filter((_, index) => index !== id);
+                localStorage.setItem('mock_portfolio', JSON.stringify(portfolio));
+            }
+            loadPortfolio();
+        }
+
+        async function loadPortfolio() {
+            let portfolio = [];
+            if (supabaseClient) {
+                const { data, error } = await supabaseClient.from('mock_portfolio').select('*');
+                if (!error) portfolio = data;
+            } else {
+                portfolio = JSON.parse(localStorage.getItem('mock_portfolio') || '[]');
+            }
+
+            const section = document.getElementById('portfolio-section');
+            const grid = document.getElementById('portfolio-grid');
+            
+            if (portfolio.length === 0) {
+                section.style.display = 'none';
+                return;
+            }
+
+            section.style.display = 'block';
+            grid.innerHTML = '';
+            
+            let totalProfitSum = 0;
+
+            portfolio.forEach((pos, index) => {
+                const currentData = allData.find(d => d.ticker === pos.ticker);
+                const currentPrice = currentData ? parseFloat(currentData.price) : pos.buy_price;
+                const profit = ((currentPrice - pos.buy_price) / pos.buy_price) * 100;
+                totalProfitSum += profit;
+
+                const card = document.createElement('div');
+                card.className = 'portfolio-card';
+                card.innerHTML = `
+                    <button class="sell-btn" onclick="sellStock(${supabaseClient ? pos.id : index}, '${pos.ticker}')">&times;</button>
+                    <div class="p-ticker">${pos.name} (${pos.ticker})</div>
+                    <div style="font-size: 0.8em; color: var(--secondary);">買入價: $${pos.buy_price}</div>
+                    <div style="font-size: 0.8em; color: var(--secondary);">現價: $${currentPrice}</div>
+                    <div class="p-profit" style="color: ${profit >= 0 ? 'var(--danger)' : 'var(--success)'}">
+                        收益: ${profit >= 0 ? '+' : ''}${profit.toFixed(2)}%
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+
+            const avgProfit = totalProfitSum / portfolio.length;
+            document.getElementById('total-profit').innerHTML = `平均收益: <span style="color: ${avgProfit >= 0 ? 'var(--danger)' : 'var(--success)'}">${avgProfit >= 0 ? '+' : ''}${avgProfit.toFixed(2)}%</span>`;
+        }
 
         function showChart(ticker, market) {
             const prefix = market === 'Listed' ? 'TWSE' : 'TPEX';
@@ -262,6 +403,7 @@
                 }
                 
                 renderGrid();
+                loadPortfolio();
             } catch (e) {
                 console.error('Error loading data:', e);
             }
@@ -345,6 +487,9 @@
                         <div class="card-actions">
                             <button class="btn" onclick="event.stopPropagation(); showChart('${item.ticker}', '${item.market}')">
                                 📊 查看 K 線圖
+                            </button>
+                            <button class="btn btn-primary" onclick="event.stopPropagation(); mockBuy('${item.ticker}', '${item.name}', '${item.price}')">
+                                💰 模擬買入
                             </button>
                         </div>
 
