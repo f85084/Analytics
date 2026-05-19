@@ -5,9 +5,9 @@ const yahooFinance = new YahooFinance();
 const fs = require('fs');
 
 const DISPOSAL_URL = 'https://chengwaye.com/disposal-forecast';
-const HOT_STOCKS_URL = 'https://tw.stock.yahoo.com/rank/turnover';
+const TWSE_HOT_URL = 'https://openapi.twse.com.tw/v1/exchangeReport/TWTB4U'; // 上市成交值前20
+const TPEX_HOT_URL = 'https://www.tpex.org.tw/openapi/v1/tpex_active_dollar_volume'; // 上櫃成交值
 
-// Using a very common and modern User-Agent to avoid 404/Blocking
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36';
 
 async function fetchDisposalList() {
@@ -38,48 +38,42 @@ async function fetchDisposalList() {
 }
 
 async function fetchHotStocks() {
-    console.log('Fetching market hotspots (by trading value)...');
+    console.log('Fetching market hotspots from official APIs...');
+    const hotStocks = [];
+    
     try {
-        const response = await axios.get(HOT_STOCKS_URL, {
-            headers: { 'User-Agent': UA }
-        });
-        const data = response.data;
-        const stocks = [];
-        // Regex to find tickers like 2330.TW or 2330.TWO
-        const regex = /(\d{4,6})\.(TW|TWO)/g;
-        let match;
-        const seen = new Set();
-        while ((match = regex.exec(data)) !== null && seen.size < 30) {
-            const symbol = match[0];
-            const ticker = match[1];
-            const suffix = match[2];
-            if (!seen.has(symbol) && !ticker.startsWith('00')) {
-                seen.add(symbol);
-                stocks.push({
-                    symbol: symbol,
-                    ticker: ticker,
-                    name: '', // Will fetch later
-                    market: suffix === 'TW' ? 'Listed' : 'OTC',
+        // 1. Fetch Listed Stocks (TWSE)
+        const twseRes = await axios.get(TWSE_HOT_URL);
+        if (Array.isArray(twseRes.data)) {
+            twseRes.data.slice(0, 15).forEach(item => {
+                hotStocks.push({
+                    symbol: `${item.Code}.TW`,
+                    ticker: item.Code,
+                    name: item.Name,
+                    market: 'Listed',
                     source: 'hot'
                 });
-            }
+            });
         }
-        
-        console.log(`Found ${stocks.length} hot tickers. Fetching names...`);
-        for (const s of stocks) {
-            try {
-                const quote = await yahooFinance.quote(s.symbol);
-                s.name = quote.shortName || quote.longName || s.ticker;
-            } catch (e) {
-                s.name = s.ticker;
-            }
+
+        // 2. Fetch OTC Stocks (TPEX)
+        const tpexRes = await axios.get(TPEX_HOT_URL);
+        if (Array.isArray(tpexRes.data)) {
+            tpexRes.data.slice(0, 15).forEach(item => {
+                hotStocks.push({
+                    symbol: `${item.SecuritiesCompanyCode}.TWO`,
+                    ticker: item.SecuritiesCompanyCode,
+                    name: item.CompanyName,
+                    market: 'OTC',
+                    source: 'hot'
+                });
+            });
         }
-        
-        return stocks;
     } catch (error) {
-        console.error('Fetch Hot Stocks Error:', error.message);
-        return [];
+        console.error('Fetch Hot Stocks API Error:', error.message);
     }
+    
+    return hotStocks;
 }
 
 function calculateSMA(prices, period) {
@@ -104,7 +98,7 @@ function calculateRSI(prices, period = 14) {
         else losses += Math.abs(diff);
     }
     if (losses === 0) return 100;
-    const rs = (gains / period) / (Math.abs(losses) / period);
+    const rs = (gains / period) / (losses / period);
     return 100 - (100 / (1 + rs));
 }
 
@@ -123,10 +117,10 @@ function analyzeStock(m) {
         : (weeklyChange < 0 ? `📉 本週下跌 **${Math.abs(weeklyChange)}%**，正在回檔。` : '↔️ 本週價格波動不大。');
 
     const rsiValueText = isNaN(rsi) ? '計算中' : rsi;
-    const rsiText = rsi > 75 ? `⚠️ RSI 為 **${rsiValueText}**，指標顯示進入「過熱區」，追高請小心。` 
-                  : (rsi < 35 ? `🔵 RSI 為 **${rsiValueText}**，指標顯示進入「超賣區」，反彈機率高。` : `✅ RSI 為 **${rsiValueText}**，買氣很穩定。`);
+    const rsiText = rsi > 75 ? `⚠️ RSI 為 **${rsiValueText}**，代表「買太多了」，小心短線回檔。` 
+                  : (rsi < 35 ? `🔵 RSI 為 **${rsiValueText}**，代表「跌過頭了」，可能會有反彈。` : `✅ RSI 為 **${rsiValueText}**，買氣很穩定。`);
     
-    const volText = volRatio > 1.5 ? `📊 成交量放大到平常的 **${volRatio}倍**，表示有大金主在裡面。` : `📊 成交量跟平常差不多。`;
+    const volText = volRatio > 1.5 ? `📊 成交量放大到平常的 **${volRatio}倍**，表示有很多錢衝進去。` : `📊 成交量跟平常差不多。`;
 
     if (bb > 8 && smaSlope > 1 && upperSlope > 1.5) {
         let score = 90;
@@ -135,10 +129,11 @@ function analyzeStock(m) {
             score: score,
             strategy: '強勢噴發',
             reasons: [
-                `🔥 **處於極熱區**：股價正貼著預測的高點（布林上軌）往上衝，這是最強的漲勢信號。`,
-                `🚀 **加速中**：均線斜率 **${smaSlope}%** 代表趨勢正向上加速。`,
-                volText, rsiText,
-                `💡 **白話建議**：這像是在飆車，雖然快但要抓穩，適合短線操作。`
+                `🔥 **進入衝刺期**：股價正衝出近期的最高點，就像「百米衝刺快到終點」。`,
+                `🚀 **趨勢轉強**：20天平均買入成本快速上升，大家都在搶。`,
+                volText,
+                rsiText,
+                `💡 **建議**：這像是在飆車，雖然快但要抓穩，適合短線操作。`
             ]
         };
     } 
@@ -151,7 +146,7 @@ function analyzeStock(m) {
                 `🛡️ **安全地帶**：股價沒有過熱，還有繼續往上的空間。`,
                 weeklyText,
                 rsiText,
-                `💡 **白話建議**：適合想慢慢賺的人，跟著這個趨勢走通常比較安全。`
+                `💡 **建議**：適合想慢慢賺的人，跟著這個趨勢走通常比較安全。`
             ]
         };
     }
@@ -163,7 +158,7 @@ function analyzeStock(m) {
                 `🆘 **正在特價**：股價跌到地板上了，就像「跳樓大拍賣」。`,
                 `🛑 **不再慘跌**：雖然在低點，但已經不再像之前那樣慘跌。`,
                 weeklyText,
-                `💡 **白話建議**：適合想抄底的人，但要設定好停損點。`
+                `💡 **建議**：適合想抄底的人，但要設定好停損點。`
             ]
         };
     } else {
@@ -178,33 +173,60 @@ async function getMetrics(stock) {
         const endDate = new Date();
         const startDate = new Date();
         startDate.setDate(endDate.getDate() - 60);
-        const history = await yahooFinance.historical(stock.symbol, { period1: startDate, period2: endDate, interval: '1d' });
+
+        const queryOptions = {
+            period1: startDate,
+            period2: endDate,
+            interval: '1d'
+        };
+
+        const history = await yahooFinance.historical(stock.symbol, queryOptions);
         if (!history || history.length < 22) return null;
+
         const sorted = history.sort((a, b) => new Date(b.date) - new Date(a.date));
         const prices = sorted.map(h => h.close).filter(p => p != null);
         const volumes = sorted.map(h => h.volume).filter(v => v != null);
+        
         if (prices.length < 22) return null;
+
         const sma20 = calculateSMA(prices, 20);
         const sd20 = calculateSD(prices, 20, sma20);
         if (sma20 === null || sd20 === null) return null;
+        
         const upper = sma20 + 2 * sd20;
         const current = prices[0];
         const bbPos = ((current - sma20) / (upper - sma20)) * 10;
+
         const prevPrices = prices.slice(1);
         const prevSma20 = calculateSMA(prevPrices, 20);
         const prevSd20 = calculateSD(prevPrices, 20, prevSma20);
         if (prevSma20 === null || prevSd20 === null) return null;
+        
         const prevUpper = prevSma20 + 2 * prevSd20;
         const smaSlope = ((sma20 - prevSma20) / prevSma20) * 100;
         const upperSlope = ((upper - prevUpper) / prevUpper) * 100;
+
         let weeklyChange = 0;
         if (prices.length >= 6) {
             weeklyChange = ((prices[0] - prices[5]) / prices[5]) * 100;
         }
+
         const rsi = calculateRSI(prices, 14);
         const avgVol5 = calculateSMA(volumes.slice(1), 5);
         const volRatio = (avgVol5 && avgVol5 > 0) ? (volumes[0] / avgVol5) : 1;
-        const metrics = { ...stock, price: current.toFixed(2), bbPosition: bbPos.toFixed(2), smaSlope: smaSlope.toFixed(2), upperSlope: upperSlope.toFixed(2), weeklyChange: weeklyChange.toFixed(2), rsi: rsi ? rsi.toFixed(2) : 'N/A', volRatio: volRatio.toFixed(2), updatedAt: new Date().toISOString() };
+
+        const metrics = {
+            ...stock,
+            price: current.toFixed(2),
+            bbPosition: bbPos.toFixed(2),
+            smaSlope: smaSlope.toFixed(2),
+            upperSlope: upperSlope.toFixed(2),
+            weeklyChange: weeklyChange.toFixed(2),
+            rsi: rsi ? rsi.toFixed(2) : 'N/A',
+            volRatio: volRatio.toFixed(2),
+            updatedAt: new Date().toISOString()
+        };
+        
         metrics.analysis = analyzeStock(metrics);
         return metrics;
     } catch (e) {
@@ -229,4 +251,5 @@ async function main() {
     fs.writeFileSync(require('path').join(__dirname, 'data.json'), JSON.stringify(results, null, 2));
     console.log('Saved ' + results.length + ' results.');
 }
+
 main();
