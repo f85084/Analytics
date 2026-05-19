@@ -18,7 +18,7 @@
             font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif; 
             line-height: 1.6; 
             color: #1e293b; 
-            max-width: 1200px; 
+            max-width: 1000px; 
             margin: 0 auto; 
             padding: 20px; 
             background-color: var(--bg); 
@@ -28,6 +28,42 @@
         .subtitle { color: var(--secondary); font-size: 1.1em; }
         
         .last-updated { text-align: center; margin-bottom: 20px; font-size: 0.8em; color: var(--secondary); }
+
+        /* Portfolio Styles */
+        .portfolio-section {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid #e2e8f0;
+        }
+        .portfolio-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        .portfolio-card {
+            padding: 15px;
+            border: 1px solid #f1f5f9;
+            background: #f8fafc;
+            border-radius: 10px;
+            position: relative;
+        }
+        .portfolio-card .sell-btn {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: none;
+            border: none;
+            color: var(--secondary);
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+        .portfolio-card .sell-btn:hover { color: var(--danger); }
+        .p-ticker { font-weight: bold; color: #1e293b; }
+        .p-profit { font-weight: bold; margin-top: 5px; }
 
         /* Tabs Styling */
         .source-tabs {
@@ -81,42 +117,6 @@
             color: white;
             border-color: var(--primary);
         }
-
-        /* Portfolio Styles */
-        .portfolio-section {
-            background: #fff;
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            border: 1px solid #e2e8f0;
-        }
-        .portfolio-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 15px;
-        }
-        .portfolio-card {
-            padding: 15px;
-            border: 1px solid #f1f5f9;
-            background: #f8fafc;
-            border-radius: 10px;
-            position: relative;
-        }
-        .portfolio-card .sell-btn {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            background: none;
-            border: none;
-            color: var(--secondary);
-            cursor: pointer;
-            font-size: 1.2em;
-        }
-        .portfolio-card .sell-btn:hover { color: var(--danger); }
-        .p-ticker { font-weight: bold; color: #1e293b; }
-        .p-profit { font-weight: bold; margin-top: 5px; }
 
         /* Grid Styling */
         .stock-grid {
@@ -235,13 +235,13 @@
         .reason-list { margin: 0; padding-left: 20px; font-size: 0.9em; color: #475569; }
         .reason-list li { margin-bottom: 6px; }
 
-        .empty-state { text-align: center; grid-column: 1 / -1; padding: 40px; color: var(--secondary); }
-
         /* Modal Styles */
         .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
         .modal-content { position: relative; background: #fff; margin: 2% auto; padding: 10px; width: 90%; height: 90%; border-radius: 12px; overflow: hidden; }
         .close { position: absolute; right: 15px; top: 5px; font-size: 35px; cursor: pointer; color: #64748b; z-index: 1001; line-height: 1; }
         .chart-container { width: 100%; height: 100%; }
+
+        .last-updated { text-align: center; margin-bottom: 20px; font-size: 0.8em; color: var(--secondary); }
     </style>
     <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -250,6 +250,9 @@
     <header>
         <h1>AI 股市推薦看板</h1>
         <p class="subtitle">結合多維技術指標的智慧投資助手</p>
+        <button class="btn" style="margin-top: 10px; border-radius: 20px; padding: 6px 20px; margin-left: auto; margin-right: auto;" onclick="document.getElementById('help-modal').style.display='block'">
+            ❓ 如何看懂推薦邏輯？
+        </button>
     </header>
 
     <div class="last-updated">
@@ -287,6 +290,39 @@
         <div class="modal-content">
             <span class="close" onclick="closeChart()">&times;</span>
             <div id="tradingview_widget" class="chart-container"></div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content" style="height: auto; max-width: 600px; padding: 30px; line-height: 1.8; margin-top: 10vh;">
+            <span class="close" onclick="document.getElementById('help-modal').style.display='none'">&times;</span>
+            <h2 style="color: var(--primary); border-bottom: 2px solid var(--primary); padding-bottom: 10px;">🧠 教你如何看懂推薦邏輯</h2>
+            
+            <p>這套系統就像您的「虛擬教練」，幫您從全台灣最熱門的股票中挑選出最有潛力的標的：</p>
+            
+            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <strong>🔥 強勢噴發 (Breakout)</strong><br>
+                就像「百米衝刺即將奪冠」。股價衝出近期新高，且伴隨成交量放大。雖然賺最快，但也要注意不要追在最後一刻。
+            </div>
+            
+            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <strong>✅ 穩健上漲 (Trend)</strong><br>
+                就像「爬樓梯」。價格穩穩守在平均成本線之上，步步高升。這是最健康的走勢，適合波段持有。
+            </div>
+            
+            <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin: 15px 0;">
+                <strong>🆘 跌深反彈 (Rebound)</strong><br>
+                就像「跳樓大拍賣」。股價已經跌得不合理了，當跌勢開始踩剎車，通常會有一波反彈。
+            </div>
+
+            <h3 style="font-size: 1.1em;">📊 指標小百科：</h3>
+            <ul style="padding-left: 20px;">
+                <li><strong>布林位置</strong>：判斷現在是「貴」還是「便宜」。</li>
+                <li><strong>均線斜率</strong>：判斷大家最近的買入成本是「上升」還是「下降」。</li>
+                <li><strong>RSI</strong>：判斷買氣是否「過熱」。高於 75 要小心回檔。</li>
+                <li><strong>成交量比</strong>：判斷「大戶」有沒有進場加油。</li>
+            </ul>
         </div>
     </div>
 
@@ -422,8 +458,8 @@
                         <div class="metric-item">成交量比: ${item.volRatio}x</div>
                     </div>
                     <div class="card-actions">
-                        <button class="btn" onclick="event.stopPropagation(); showChart('${item.ticker}','${item.market}')">📊 K線</button>
-                        <button class="btn btn-primary" onclick="event.stopPropagation(); mockBuy('${item.ticker}','${item.name}','${item.price}')">💰 買入</button>
+                        <button class="btn" onclick="event.stopPropagation(); showChart('${item.ticker}','${item.market}')">📊 查看 K 線圖</button>
+                        <button class="btn btn-primary" onclick="event.stopPropagation(); mockBuy('${item.ticker}','${item.name}','${item.price}')">💰 模擬買入</button>
                     </div>
                     <div class="why-section">
                         <div class="why-title">數據分析 (為什麼推薦？)</div>
