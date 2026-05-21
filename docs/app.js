@@ -24,11 +24,13 @@ function applyFilters() {
   const market = document.getElementById("marketFilter").value;
   const level = document.getElementById("levelFilter").value;
   const zoneOnly = document.getElementById("zoneFilter").checked;
+  const todayOnly = document.getElementById("todayDisposalFilter").checked;
 
   let rows = [...allStocks];
   if (market !== "ALL") rows = rows.filter((s) => s.market === market);
   if (level !== "ALL") rows = rows.filter((s) => s.level === level);
   if (zoneOnly) rows = rows.filter((s) => s.bbPosition >= 4 && s.bbPosition <= 6);
+  if (todayOnly) rows = rows.filter((s) => s.daysUntilDisposal === 0);
 
   renderRows(rows);
 }
@@ -127,6 +129,7 @@ async function init() {
   document.getElementById("marketFilter").addEventListener("change", applyFilters);
   document.getElementById("levelFilter").addEventListener("change", applyFilters);
   document.getElementById("zoneFilter").addEventListener("change", applyFilters);
+  document.getElementById("todayDisposalFilter").addEventListener("change", applyFilters);
 }
 
 function renderDataStatusBanner(updatedAt) {
