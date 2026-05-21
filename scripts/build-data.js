@@ -7,6 +7,8 @@ const yahooFinance = new YahooFinance();
 
 const DISPOSAL_URL = "https://chengwaye.com/disposal-forecast";
 const OUTPUT_PATH = path.join(__dirname, "..", "docs", "data.json");
+const TWSE_T86_URL = "https://www.twse.com.tw/rwd/zh/fund/T86";
+const TPEX_3I_URL = "https://www.tpex.org.tw/web/stock/3insti/daily_trade/3itrade.php";
 
 function parseDisposalDateText(text) {
   if (!text) return null;
@@ -35,6 +37,105 @@ function getDaysUntil(date) {
   const start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const end = new Date(date.getFullYear(), date.getMonth(), date.getDate());
   return Math.round((end.getTime() - start.getTime()) / (24 * 60 * 60 * 1000));
+}
+
+function formatTwDate(date = new Date()) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}${m}${d}`;
+}
+
+function formatRocDate(date = new Date()) {
+  const y = date.getFullYear() - 1911;
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}/${m}/${d}`;
+}
+
+function parseNumberLike(value) {
+  if (value === null || value === undefined) return null;
+  const cleaned = String(value).replace(/,/g, "").trim();
+  if (cleaned === "" || cleaned === "--") return null;
+  const num = Number(cleaned);
+  return Number.isFinite(num) ? num : null;
+}
+
+function sharesToLots(shares) {
+  if (shares === null || shares === undefined) return null;
+  return Math.round((shares / 1000) * 100) / 100;
+}
+
+async function fetchInstitutionalNetMap() {
+  const netMap = new Map();
+
+  let pickedDate = null;
+  for (let i = 0; i < 7; i++) {
+    try {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      const twseDate = formatTwDate(d);
+      const twseRes = await axios.get(TWSE_T86_URL, {
+        params: {
+          response: "json",
+          date: twseDate,
+          selectType: "ALLBUT0999"
+        },
+        timeout: 20000
+      });
+
+      const rows = twseRes.data?.data || [];
+      if (!Array.isArray(rows) || rows.length === 0) continue;
+
+      rows.forEach((row) => {
+        const ticker = String(row[0] || "").trim();
+        const netShares = parseNumberLike(row[row.length - 1]);
+        const net = sharesToLots(netShares);
+        if (/^\d{4,6}$/.test(ticker) && net !== null) {
+          netMap.set(ticker, net);
+        }
+      });
+      pickedDate = d;
+      break;
+    } catch (error) {
+      // Try previous day.
+    }
+  }
+
+  try {
+    const d = pickedDate || new Date();
+    const rocDate = formatRocDate(d);
+    const tpexRes = await axios.get(TPEX_3I_URL, {
+      params: {
+        l: "zh-tw",
+        d: rocDate
+      },
+      headers: {
+        "User-Agent": "Mozilla/5.0",
+        Referer: "https://www.tpex.org.tw/"
+      },
+      timeout: 20000
+    });
+
+    const html = typeof tpexRes.data === "string" ? tpexRes.data : "";
+    const $ = cheerio.load(html);
+    $("table tbody tr").each((_, tr) => {
+      const tds = $(tr).find("td");
+      if (tds.length < 3) return;
+
+      const ticker = $(tds[0]).text().trim();
+      const netText = $(tds[tds.length - 1]).text().trim();
+      const netShares = parseNumberLike(netText);
+      const net = sharesToLots(netShares);
+      if (/^\d{4,6}$/.test(ticker) && net !== null) {
+        netMap.set(ticker, net);
+      }
+    });
+  } catch (error) {
+    console.error(`TPEX institutional data failed: ${error.message}`);
+  }
+
+  return netMap;
 }
 
 function sma(values, period) {
@@ -179,12 +280,19 @@ async function calculateMetrics(stock) {
 
 async function run() {
   const candidates = await fetchDisposalCandidates();
+  const institutionalNetMap = await fetchInstitutionalNetMap();
   const results = [];
 
   for (const stock of candidates) {
     try {
       const metrics = await calculateMetrics(stock);
-      if (metrics) results.push(metrics);
+      if (metrics) {
+        const net = institutionalNetMap.get(stock.ticker);
+        results.push({
+          ...metrics,
+          institutionalNetLots: net ?? null
+        });
+      }
     } catch (error) {
       console.error(`Skip ${stock.symbol}: ${error.message}`);
     }
