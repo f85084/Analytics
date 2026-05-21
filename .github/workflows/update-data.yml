@@ -1,9 +1,9 @@
-name: Update stock data
+name: Auto Update Stock Data (After Close 13:40 TW)
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: '30 8 * * 1-5'
+    - cron: '40 5 * * 1-5'
 
 permissions:
   contents: write
