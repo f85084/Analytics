@@ -74,6 +74,21 @@ th, td {
   text-align: left;
   white-space: nowrap;
 }
+.expand-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+.detail-row td {
+  background: #fffdf7;
+  border-bottom: 1px solid #e9e3d7;
+}
+.reason {
+  font-size: 13px;
+  line-height: 1.5;
+}
 thead th {
   background: #f8f0df;
 }
