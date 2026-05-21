@@ -49,11 +49,20 @@ function renderRows(stocks) {
     if (v === null || v === undefined || Number.isNaN(v)) return "-";
     return Number(v).toLocaleString("zh-TW");
   }
+  function getChipSignal(v) {
+    if (v === null || v === undefined || Number.isNaN(v)) {
+      return { text: "無資料", cls: "chip-signal-na" };
+    }
+    if (v > 0) return { text: "買超", cls: "chip-signal-buy" };
+    if (v < 0) return { text: "賣超", cls: "chip-signal-sell" };
+    return { text: "持平", cls: "chip-signal-na" };
+  }
 
   stocks.forEach((s) => {
     const tr = document.createElement("tr");
     const zoneClass = s.bbPosition >= 4 && s.bbPosition <= 6 ? "zone" : "";
     const isExpanded = expandedTicker === s.ticker;
+    const chipSignal = getChipSignal(s.institutionalNetLots);
     tr.innerHTML = `
       <td><button class="expand-btn" data-ticker="${s.ticker}">${isExpanded ? "收合" : "展開"}</button></td>
       <td>${s.ticker}</td>
@@ -66,6 +75,7 @@ function renderRows(stocks) {
       <td class="${s.smaSlopePct >= 0 ? "up" : "down"}">${s.smaSlopePct}</td>
       <td class="${s.upperSlopePct >= 0 ? "up" : "down"}">${s.upperSlopePct}</td>
       <td class="${(s.institutionalNetLots ?? 0) > 0 ? "up" : ((s.institutionalNetLots ?? 0) < 0 ? "down" : "")}">${fmtNetLots(s.institutionalNetLots)}</td>
+      <td class="${chipSignal.cls}">${chipSignal.text}</td>
       <td><span class="level level-${s.level.toLowerCase()}">${s.level}</span></td>
       <td>${s.score}</td>
     `;
@@ -75,7 +85,7 @@ function renderRows(stocks) {
       const detail = document.createElement("tr");
       detail.className = "detail-row";
       detail.innerHTML = `
-        <td colspan="13">
+        <td colspan="14">
           <div class="reason">${buildReasonHtml(s)}</div>
         </td>
       `;
@@ -108,12 +118,21 @@ function buildReasonHtml(s) {
       ? "條件有部分成立，建議等待位階更靠近 5 或斜率再轉強。"
       : "目前偏追蹤名單，先觀察趨勢是否轉正再考慮。");
 
+  const chipHint = (s.institutionalNetLots ?? null) === null
+    ? "主力籌碼：今日無公開數據。"
+    : (s.institutionalNetLots > 0
+      ? `主力籌碼：買超 ${s.institutionalNetLots.toLocaleString("zh-TW")} 張。`
+      : (s.institutionalNetLots < 0
+        ? `主力籌碼：賣超 ${Math.abs(s.institutionalNetLots).toLocaleString("zh-TW")} 張。`
+        : "主力籌碼：持平。"));
+
   return `
     <strong>推薦原因（${s.level} 級 / ${s.score} 分）</strong><br>
     <div style="margin-top:8px;">
       <div><strong>1) 月線斜率</strong>：目前 <strong>${s.smaSlopePct}%</strong>，門檻 >= 0.8%（強）或 > 0%（弱強），狀態：${smaStatus}，得分：${smaScore}/40。</div>
       <div><strong>2) 上軌斜率</strong>：目前 <strong>${s.upperSlopePct}%</strong>，門檻 >= 0.8%（強）或 > 0%（弱強），狀態：${upperStatus}，得分：${upperScore}/30。</div>
       <div><strong>3) 位階（BB）</strong>：目前 <strong>${s.bbPosition}</strong>，目標接近 5（理想區 4~6），狀態：${zoneStatus}，得分：${zoneScore}/30。</div>
+      <div><strong>4) 籌碼</strong>：${chipHint}</div>
       <div style="margin-top:6px;"><strong>判讀建議</strong>：${actionHint}</div>
     </div>
   `;
