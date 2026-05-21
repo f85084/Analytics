@@ -22,6 +22,11 @@ body {
   margin: 0 auto 16px;
 }
 .hero h1 { margin: 0 0 8px; }
+.updated-top {
+  margin: 6px 0 0;
+  font-size: 13px;
+  opacity: .75;
+}
 .kpis {
   max-width: 1080px;
   margin: 0 auto 16px;
