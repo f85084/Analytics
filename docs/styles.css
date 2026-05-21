@@ -74,7 +74,7 @@ th, td {
   text-align: left;
   white-space: nowrap;
 }
-.map-panel {
+.topic-panel {
   max-width: 1080px;
   margin: 0 auto 16px;
   background: var(--panel);
@@ -82,32 +82,48 @@ th, td {
   border-radius: 12px;
   padding: 12px;
 }
-.map-head {
+.topic-head {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 8px;
 }
-.map-head h2 {
+.topic-head h2 {
   font-size: 18px;
   margin: 0;
 }
-.map-actions {
-  display: flex;
-  align-items: center;
+.topic-desc {
+  margin: 10px 0 8px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 8px;
 }
-.map-btn-link {
-  border: 1px solid var(--line);
-  background: #fff;
-  border-radius: 8px;
-  padding: 4px 10px;
-  text-decoration: none;
-  color: var(--ink);
+.topic-card {
+  border: 1px solid #ece6d9;
+  border-radius: 10px;
+  padding: 10px;
+  background: #fffdf7;
 }
-.map-tip {
-  margin: 8px 0 0;
+.topic-card .label {
+  font-size: 12px;
+  opacity: .75;
+}
+.topic-card .value {
+  font-size: 18px;
+  font-weight: 700;
+}
+.topic-list {
+  margin: 10px 0 0;
+  padding-left: 20px;
+  font-size: 14px;
+}
+.topic-meta {
+  margin-top: 8px;
   font-size: 12px;
   opacity: .75;
 }

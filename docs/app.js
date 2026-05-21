@@ -1,6 +1,35 @@
 let allStocks = [];
 let expandedTicker = null;
 
+function renderTopicPanel(topic) {
+  const root = document.getElementById("topicPanel");
+  if (!topic) {
+    root.innerHTML = "";
+    return;
+  }
+
+  const metrics = topic.metrics || {};
+  const trends = topic.keyTrends || [];
+  const keyMetrics = topic.keyMetrics || [];
+
+  root.innerHTML = `
+    <div class="topic-head">
+      <h2>${topic.name || "題材重點"}</h2>
+      <span class="topic-meta">來源：AI Stock Map（公開資料整理）</span>
+    </div>
+    <p class="topic-desc">${topic.description || ""}</p>
+    <div class="topic-grid">
+      <div class="topic-card"><div class="label">CAGR</div><div class="value">${metrics.cagr || "-"}</div></div>
+      <div class="topic-card"><div class="label">市場規模（${metrics.marketSizeYear || "-" }）</div><div class="value">${metrics.marketSize ? `$${metrics.marketSize}B` : "-"}</div></div>
+      <div class="topic-card"><div class="label">預估規模（${metrics.marketSizeProjectedYear || "-" }）</div><div class="value">${metrics.marketSizeProjected ? `$${metrics.marketSizeProjected}B` : "-"}</div></div>
+      <div class="topic-card"><div class="label">關鍵模式</div><div class="value">${(keyMetrics[1] && keyMetrics[1].value) || "-"}</div></div>
+    </div>
+    <ul class="topic-list">
+      ${trends.slice(0, 4).map((x) => `<li>${x}</li>`).join("")}
+    </ul>
+  `;
+}
+
 function renderKpis(summary) {
   const root = document.getElementById("kpis");
   root.innerHTML = "";
@@ -107,6 +136,7 @@ async function init() {
   const data = await res.json();
   allStocks = data.stocks || [];
 
+  renderTopicPanel(data.topicInsight);
   renderKpis(data.summary || { total: 0, levelA: 0, levelB: 0, levelC: 0 });
   renderRows(allStocks);
 
