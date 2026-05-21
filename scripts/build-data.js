@@ -8,6 +8,35 @@ const yahooFinance = new YahooFinance();
 const DISPOSAL_URL = "https://chengwaye.com/disposal-forecast";
 const OUTPUT_PATH = path.join(__dirname, "..", "docs", "data.json");
 
+function parseDisposalDateText(text) {
+  if (!text) return null;
+  const match = text.match(/(\d{2})-(\d{2})/);
+  if (!match) return null;
+
+  const month = Number(match[1]);
+  const day = Number(match[2]);
+  if (!month || !day) return null;
+
+  const now = new Date();
+  const year = now.getFullYear();
+  let target = new Date(year, month - 1, day);
+
+  // If date looks far in the past (year boundary), roll to next year.
+  if (target.getTime() < now.getTime() - 120 * 24 * 60 * 60 * 1000) {
+    target = new Date(year + 1, month - 1, day);
+  }
+
+  return target;
+}
+
+function getDaysUntil(date) {
+  if (!date) return null;
+  const now = new Date();
+  const start = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const end = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  return Math.round((end.getTime() - start.getTime()) / (24 * 60 * 60 * 1000));
+}
+
 function sma(values, period) {
   if (values.length < period) return null;
   const slice = values.slice(0, period);
@@ -62,6 +91,7 @@ async function fetchDisposalCandidates() {
     const marketText = $(tds[0]).text().trim();
     const ticker = $(tds[1]).text().trim();
     const name = $(tds[2]).text().trim();
+    const fastestDisposalText = $(tds[5]).text().trim();
 
     if (!/^\d{4,6}$/.test(ticker)) return;
 
@@ -69,7 +99,17 @@ async function fetchDisposalCandidates() {
     const market = listed ? "Listed" : "OTC";
     const symbol = `${ticker}${listed ? ".TW" : ".TWO"}`;
 
-    rows.push({ ticker, name, market, symbol });
+    const fastestDisposalDate = parseDisposalDateText(fastestDisposalText);
+    const daysUntilDisposal = getDaysUntil(fastestDisposalDate);
+
+    rows.push({
+      ticker,
+      name,
+      market,
+      symbol,
+      fastestDisposal: fastestDisposalText || null,
+      daysUntilDisposal
+    });
   });
 
   const bySymbol = new Map();

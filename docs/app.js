@@ -37,6 +37,13 @@ function renderRows(stocks) {
   const tbody = document.getElementById("rows");
   tbody.innerHTML = "";
 
+  function fmtDisposalDays(v) {
+    if (v === null || v === undefined || Number.isNaN(v)) return "-";
+    if (v === 0) return "今天";
+    if (v > 0) return `${v}`;
+    return `已過 ${Math.abs(v)}`;
+  }
+
   stocks.forEach((s) => {
     const tr = document.createElement("tr");
     const zoneClass = s.bbPosition >= 4 && s.bbPosition <= 6 ? "zone" : "";
@@ -47,6 +54,8 @@ function renderRows(stocks) {
       <td>${s.name}</td>
       <td>${s.market === "Listed" ? "上市" : "上櫃"}</td>
       <td>${s.price}</td>
+      <td>${s.fastestDisposal || "-"}</td>
+      <td>${fmtDisposalDays(s.daysUntilDisposal)}</td>
       <td class="${zoneClass}">${s.bbPosition}</td>
       <td class="${s.smaSlopePct >= 0 ? "up" : "down"}">${s.smaSlopePct}</td>
       <td class="${s.upperSlopePct >= 0 ? "up" : "down"}">${s.upperSlopePct}</td>
@@ -59,7 +68,7 @@ function renderRows(stocks) {
       const detail = document.createElement("tr");
       detail.className = "detail-row";
       detail.innerHTML = `
-        <td colspan="10">
+        <td colspan="12">
           <div class="reason">${buildReasonHtml(s)}</div>
         </td>
       `;
