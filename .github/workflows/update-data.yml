@@ -3,6 +3,7 @@ name: Auto Update Stock Data (After Close 13:40 TW)
 on:
   workflow_dispatch:
   schedule:
+    - cron: '0 2-5 * * 1-5'
     - cron: '40 5 * * 1-5'
 
 permissions:
