@@ -6,7 +6,6 @@ const YahooFinance = require("yahoo-finance2").default;
 const yahooFinance = new YahooFinance();
 
 const DISPOSAL_URL = "https://chengwaye.com/disposal-forecast";
-const AISTOCKMAP_BASE = "https://aistockmap.com";
 const OUTPUT_PATH = path.join(__dirname, "..", "docs", "data.json");
 
 function sma(values, period) {
@@ -138,33 +137,8 @@ async function calculateMetrics(stock) {
   };
 }
 
-async function fetchAistockmapTopicInsight() {
-  try {
-    const webpackUrl = `${AISTOCKMAP_BASE}/_next/static/chunks/webpack-2111756ae3a21c47.js`;
-    const webpackText = (await axios.get(webpackUrl, { timeout: 20000 })).data;
-    const hashMatch = webpackText.match(/47797:\"([a-z0-9]+)\"/i);
-    if (!hashMatch) return null;
-
-    const chunkUrl = `${AISTOCKMAP_BASE}/_next/static/chunks/47797.${hashMatch[1]}.js`;
-    const chunkText = (await axios.get(chunkUrl, { timeout: 20000 })).data;
-    const jsonMatch = chunkText.match(/JSON\.parse\('([\s\S]*)'\)\}\}\]\);?$/);
-    if (!jsonMatch) return null;
-
-    const decoded = jsonMatch[1]
-      .replace(/\\'/g, "'")
-      .replace(/\\"/g, "\"")
-      .replace(/\\\\/g, "\\");
-
-    return JSON.parse(decoded);
-  } catch (error) {
-    console.error(`Topic insight fetch failed: ${error.message}`);
-    return null;
-  }
-}
-
 async function run() {
   const candidates = await fetchDisposalCandidates();
-  const topicInsight = await fetchAistockmapTopicInsight();
   const results = [];
 
   for (const stock of candidates) {
@@ -179,14 +153,17 @@ async function run() {
 
   results.sort((a, b) => b.score - a.score);
 
+  if (results.length === 0 && fs.existsSync(OUTPUT_PATH)) {
+    console.warn("No stock results generated; keeping existing data.json to avoid empty page.");
+    return;
+  }
+
   const payload = {
     updatedAt: new Date().toISOString(),
     source: {
       disposal: DISPOSAL_URL,
-      quote: "Yahoo Finance",
-      topic: `${AISTOCKMAP_BASE}/?topic=asic-ip-design&activeTab=daily`
+      quote: "Yahoo Finance"
     },
-    topicInsight,
     summary: {
       total: results.length,
       levelA: results.filter((x) => x.level === "A").length,
