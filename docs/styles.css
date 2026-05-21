@@ -74,6 +74,54 @@ th, td {
   text-align: left;
   white-space: nowrap;
 }
+.map-panel {
+  max-width: 1080px;
+  margin: 0 auto 16px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+}
+.map-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.map-head h2 {
+  font-size: 18px;
+  margin: 0;
+}
+.map-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.map-btn {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.map-btn.active {
+  background: #f8f0df;
+  border-color: #d3b88f;
+}
+.map-frame {
+  margin-top: 10px;
+  width: 100%;
+  min-height: 560px;
+  border: 1px solid #ece6d9;
+  border-radius: 10px;
+  background: #fff;
+}
+.map-tip {
+  margin: 8px 0 0;
+  font-size: 12px;
+  opacity: .75;
+}
 .expand-btn {
   border: 1px solid var(--line);
   background: #fff;
