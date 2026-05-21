@@ -1,0 +1,95 @@
+:root {
+  --bg: #f5f4ef;
+  --ink: #16202a;
+  --panel: #ffffff;
+  --accent: #b56d32;
+  --good: #d62828;
+  --bad: #2a9d8f;
+  --warn: #f4a261;
+  --line: #d7d2c8;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #fff8e8, var(--bg));
+  color: var(--ink);
+  padding: 20px;
+}
+.hero {
+  max-width: 1080px;
+  margin: 0 auto 16px;
+}
+.hero h1 { margin: 0 0 8px; }
+.kpis {
+  max-width: 1080px;
+  margin: 0 auto 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+}
+.kpi {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+}
+.kpi .label { font-size: 12px; opacity: .75; }
+.kpi .value { font-size: 26px; font-weight: 700; }
+.filters {
+  max-width: 1080px;
+  margin: 0 auto 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+.filters label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+.table-wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  overflow: auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+table { width: 100%; border-collapse: collapse; }
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #efece5;
+  text-align: left;
+  white-space: nowrap;
+}
+thead th {
+  background: #f8f0df;
+}
+.zone {
+  background: #fff2cc;
+}
+.up { color: var(--good); font-weight: 700; }
+.down { color: var(--bad); font-weight: 700; }
+.level {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.level-a { background: #d62828; color: white; }
+.level-b { background: #f4a261; color: #2f2410; }
+.level-c { background: #adb5bd; color: #1e1e1e; }
+footer {
+  max-width: 1080px;
+  margin: 14px auto 0;
+  font-size: 12px;
+  opacity: .8;
+}

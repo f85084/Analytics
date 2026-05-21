@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>處置預警觀察站</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>處置預警觀察站</h1>
+    <p>簡單看位階、月線斜率、上軌斜率，快速找回到 5 附近的觀察點。</p>
+  </header>
+
+  <section class="kpis" id="kpis"></section>
+
+  <section class="filters">
+    <label>市場
+      <select id="marketFilter">
+        <option value="ALL">全部</option>
+        <option value="Listed">上市</option>
+        <option value="OTC">上櫃</option>
+      </select>
+    </label>
+    <label>推薦等級
+      <select id="levelFilter">
+        <option value="ALL">全部</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+    </label>
+    <label>只看位階 4~6
+      <input id="zoneFilter" type="checkbox" />
+    </label>
+  </section>
+
+  <section class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>代碼</th>
+          <th>名稱</th>
+          <th>市場</th>
+          <th>現價</th>
+          <th>位階</th>
+          <th>月線斜率 %</th>
+          <th>上軌斜率 %</th>
+          <th>推薦</th>
+          <th>分數</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+
+  <footer>
+    <p>資料來源：chengwaye disposal forecast + Yahoo Finance</p>
+    <p id="updatedAt"></p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
