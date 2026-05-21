@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-21T07:53:20.571Z",
+  "updatedAt": "2026-05-21T08:32:31.650Z",
   "source": {
     "disposal": "https://chengwaye.com/disposal-forecast",
     "quote": "Yahoo Finance"
@@ -40,7 +40,7 @@
       "upperSlopePct": 1.49,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 495,
+      "institutionalNetLots": 1293.87,
       "institutionalDataDate": "20260521"
     },
     {
@@ -88,7 +88,7 @@
       "upperSlopePct": 1.69,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": -949.18,
+      "institutionalNetLots": 5790.32,
       "institutionalDataDate": "20260521"
     },
     {
@@ -120,7 +120,7 @@
       "upperSlopePct": 0.47,
       "score": 85,
       "level": "A",
-      "institutionalNetLots": -570.17,
+      "institutionalNetLots": -1800.58,
       "institutionalDataDate": "20260521"
     },
     {
@@ -152,7 +152,7 @@
       "upperSlopePct": 1.81,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": 512,
+      "institutionalNetLots": 229,
       "institutionalDataDate": "20260521"
     },
     {
@@ -216,7 +216,7 @@
       "upperSlopePct": 2.12,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": -146.63,
+      "institutionalNetLots": 159.09,
       "institutionalDataDate": "20260521"
     },
     {
@@ -296,7 +296,7 @@
       "upperSlopePct": 0.07,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": 154.97,
+      "institutionalNetLots": 442.85,
       "institutionalDataDate": "20260521"
     },
     {
@@ -312,7 +312,7 @@
       "upperSlopePct": 0.42,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": 103.89,
+      "institutionalNetLots": 28,
       "institutionalDataDate": "20260521"
     },
     {
@@ -376,7 +376,7 @@
       "upperSlopePct": 0.67,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": 72.37,
+      "institutionalNetLots": -446.85,
       "institutionalDataDate": "20260521"
     },
     {
@@ -408,7 +408,7 @@
       "upperSlopePct": 0.55,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": -19.69,
+      "institutionalNetLots": -31.75,
       "institutionalDataDate": "20260521"
     },
     {
@@ -424,7 +424,7 @@
       "upperSlopePct": 0.52,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": -400,
+      "institutionalNetLots": 1531.34,
       "institutionalDataDate": "20260521"
     },
     {
@@ -440,7 +440,7 @@
       "upperSlopePct": 9.38,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 70.71,
+      "institutionalNetLots": -1889.24,
       "institutionalDataDate": "20260521"
     },
     {
@@ -472,8 +472,8 @@
       "upperSlopePct": 8.73,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -104,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3675",
@@ -536,7 +536,7 @@
       "upperSlopePct": 8.28,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 27.36,
+      "institutionalNetLots": 71.91,
       "institutionalDataDate": "20260521"
     },
     {
@@ -552,7 +552,7 @@
       "upperSlopePct": 7.6,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -718.41,
+      "institutionalNetLots": -339.94,
       "institutionalDataDate": "20260521"
     },
     {
@@ -568,7 +568,7 @@
       "upperSlopePct": 7.56,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -43.74,
+      "institutionalNetLots": -391.5,
       "institutionalDataDate": "20260521"
     },
     {
@@ -584,7 +584,7 @@
       "upperSlopePct": 3.52,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -8.78,
+      "institutionalNetLots": -29,
       "institutionalDataDate": "20260521"
     },
     {
@@ -600,7 +600,7 @@
       "upperSlopePct": 2.02,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 127.05,
+      "institutionalNetLots": -21.55,
       "institutionalDataDate": "20260521"
     },
     {
@@ -648,7 +648,7 @@
       "upperSlopePct": -0.52,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -16,
+      "institutionalNetLots": 25,
       "institutionalDataDate": "20260521"
     },
     {
@@ -712,7 +712,7 @@
       "upperSlopePct": 2.81,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -154.74,
+      "institutionalNetLots": 406.46,
       "institutionalDataDate": "20260521"
     },
     {
@@ -744,7 +744,7 @@
       "upperSlopePct": 6.98,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -343.7,
+      "institutionalNetLots": 549.55,
       "institutionalDataDate": "20260521"
     },
     {
@@ -760,7 +760,7 @@
       "upperSlopePct": 5.87,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 472.96,
+      "institutionalNetLots": 529.66,
       "institutionalDataDate": "20260521"
     },
     {
@@ -776,7 +776,7 @@
       "upperSlopePct": 3.7,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 201.81,
+      "institutionalNetLots": 79.63,
       "institutionalDataDate": "20260521"
     },
     {
@@ -824,7 +824,7 @@
       "upperSlopePct": 6.1,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 645.71,
+      "institutionalNetLots": 761,
       "institutionalDataDate": "20260521"
     },
     {
@@ -840,7 +840,7 @@
       "upperSlopePct": 3.1,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 678.04,
+      "institutionalNetLots": 584.51,
       "institutionalDataDate": "20260521"
     },
     {
@@ -856,7 +856,7 @@
       "upperSlopePct": 5.73,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -15,
+      "institutionalNetLots": -44.98,
       "institutionalDataDate": "20260521"
     },
     {
@@ -968,7 +968,7 @@
       "upperSlopePct": 0.2,
       "score": 55,
       "level": "B",
-      "institutionalNetLots": 48.07,
+      "institutionalNetLots": 115.73,
       "institutionalDataDate": "20260521"
     },
     {
@@ -1000,7 +1000,7 @@
       "upperSlopePct": -0.26,
       "score": 50,
       "level": "C",
-      "institutionalNetLots": 14.68,
+      "institutionalNetLots": 65.01,
       "institutionalDataDate": "20260521"
     },
     {
@@ -1016,7 +1016,7 @@
       "upperSlopePct": -0.3,
       "score": 40,
       "level": "C",
-      "institutionalNetLots": 137,
+      "institutionalNetLots": 117.53,
       "institutionalDataDate": "20260521"
     },
     {
@@ -1048,7 +1048,7 @@
       "upperSlopePct": 0.22,
       "score": 35,
       "level": "C",
-      "institutionalNetLots": 8.4,
+      "institutionalNetLots": 102.58,
       "institutionalDataDate": "20260521"
     },
     {
@@ -1128,7 +1128,7 @@
       "upperSlopePct": 0.19,
       "score": 15,
       "level": "C",
-      "institutionalNetLots": 342.5,
+      "institutionalNetLots": 53.13,
       "institutionalDataDate": "20260521"
     },
     {
@@ -1160,7 +1160,7 @@
       "upperSlopePct": -0.3,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": -136.46,
+      "institutionalNetLots": 506.91,
       "institutionalDataDate": "20260521"
     },
     {
@@ -1176,7 +1176,7 @@
       "upperSlopePct": -0.08,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": -25.96,
+      "institutionalNetLots": 59.4,
       "institutionalDataDate": "20260521"
     },
     {
@@ -1208,7 +1208,7 @@
       "upperSlopePct": -2.12,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": -148.28,
+      "institutionalNetLots": -121.95,
       "institutionalDataDate": "20260521"
     },
     {
@@ -1272,7 +1272,7 @@
       "upperSlopePct": -1.69,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 23,
+      "institutionalNetLots": 304.86,
       "institutionalDataDate": "20260521"
     }
   ]
