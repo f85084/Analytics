@@ -18,7 +18,7 @@ body {
   padding: 20px;
 }
 .hero {
-  max-width: 1080px;
+  max-width: 1360px;
   margin: 0 auto 16px;
 }
 .hero h1 { margin: 0 0 8px; }
@@ -37,7 +37,7 @@ body {
   color: #5a420c;
 }
 .kpis {
-  max-width: 1080px;
+  max-width: 1360px;
   margin: 0 auto 16px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -52,7 +52,7 @@ body {
 .kpi .label { font-size: 12px; opacity: .75; }
 .kpi .value { font-size: 26px; font-weight: 700; }
 .filters {
-  max-width: 1080px;
+  max-width: 1360px;
   margin: 0 auto 12px;
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +69,7 @@ body {
   padding: 8px 10px;
 }
 .table-wrap {
-  max-width: 1080px;
+  max-width: 1360px;
   margin: 0 auto;
   overflow: auto;
   background: var(--panel);
@@ -170,7 +170,7 @@ thead th {
 .level-b { background: #f4a261; color: #2f2410; }
 .level-c { background: #adb5bd; color: #1e1e1e; }
 footer {
-  max-width: 1080px;
+  max-width: 1360px;
   margin: 14px auto 0;
   font-size: 12px;
   opacity: .8;
