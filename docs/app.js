@@ -1,5 +1,6 @@
 let allStocks = [];
 let expandedTicker = null;
+const STALE_HOURS = 30;
 
 function renderKpis(summary) {
   const root = document.getElementById("kpis");
@@ -110,11 +111,30 @@ async function init() {
   renderKpis(data.summary || { total: 0, levelA: 0, levelB: 0, levelC: 0 });
   renderRows(allStocks);
 
-  document.getElementById("updatedAt").textContent = `更新時間: ${new Date(data.updatedAt).toLocaleString("zh-TW")}`;
+  const updatedAt = new Date(data.updatedAt);
+  document.getElementById("updatedAt").textContent = `更新時間: ${updatedAt.toLocaleString("zh-TW")}`;
+  renderDataStatusBanner(updatedAt);
 
   document.getElementById("marketFilter").addEventListener("change", applyFilters);
   document.getElementById("levelFilter").addEventListener("change", applyFilters);
   document.getElementById("zoneFilter").addEventListener("change", applyFilters);
+}
+
+function renderDataStatusBanner(updatedAt) {
+  const banner = document.getElementById("dataStatusBanner");
+  if (!banner || Number.isNaN(updatedAt.getTime())) return;
+
+  const ageMs = Date.now() - updatedAt.getTime();
+  const staleMs = STALE_HOURS * 60 * 60 * 1000;
+
+  if (ageMs > staleMs) {
+    const ageHours = Math.floor(ageMs / (60 * 60 * 1000));
+    banner.hidden = false;
+    banner.textContent = `資料已超過 ${ageHours} 小時未更新，可能是排程或抓取失敗。請到 GitHub Actions 檢查最新執行狀態。`;
+    return;
+  }
+
+  banner.hidden = true;
 }
 
 init().catch((err) => {

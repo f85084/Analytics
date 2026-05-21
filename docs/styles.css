@@ -27,6 +27,15 @@ body {
   font-size: 13px;
   opacity: .75;
 }
+.status-banner {
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  border: 1px solid #f0c36d;
+  background: #fff3cd;
+  color: #5a420c;
+}
 .kpis {
   max-width: 1080px;
   margin: 0 auto 16px;
