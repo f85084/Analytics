@@ -76,22 +76,29 @@ function renderRows(stocks) {
 }
 
 function buildReasonHtml(s) {
-  const smaReason = s.smaSlopePct >= 0.8
-    ? "月線斜率 >= 0.8%，趨勢向上加分。"
-    : (s.smaSlopePct > 0 ? "月線斜率為正，小幅趨勢向上。" : "月線斜率非正，趨勢分較弱。");
-  const upperReason = s.upperSlopePct >= 0.8
-    ? "上軌斜率 >= 0.8%，波動上沿同步抬升。"
-    : (s.upperSlopePct > 0 ? "上軌斜率為正，短線結構偏強。" : "上軌斜率非正，結構動能偏弱。");
-  const zoneReason = (s.bbPosition >= 4 && s.bbPosition <= 6)
-    ? "位階落在 4~6（接近你設定的 5 左右區間）。"
-    : `位階目前在 ${s.bbPosition}，和 5 的距離較大。`;
+  const smaScore = s.smaSlopePct >= 0.8 ? 40 : (s.smaSlopePct > 0 ? 20 : 0);
+  const upperScore = s.upperSlopePct >= 0.8 ? 30 : (s.upperSlopePct > 0 ? 15 : 0);
+  const distanceToFive = Math.abs(s.bbPosition - 5);
+  const zoneScore = distanceToFive <= 1 ? 30 : (distanceToFive <= 2 ? 20 : (distanceToFive <= 3 ? 10 : 0));
+
+  const smaStatus = s.smaSlopePct >= 0.8 ? "強勢上升" : (s.smaSlopePct > 0 ? "緩升" : "非上升");
+  const upperStatus = s.upperSlopePct >= 0.8 ? "上軌抬升明顯" : (s.upperSlopePct > 0 ? "上軌小幅抬升" : "上軌未抬升");
+  const zoneStatus = (s.bbPosition >= 4 && s.bbPosition <= 6) ? "落在理想撿點區" : "不在理想撿點區";
+
+  const actionHint = s.level === "A"
+    ? "可列入優先觀察，下一步用籌碼面確認是否有大戶提前調節。"
+    : (s.level === "B"
+      ? "條件有部分成立，建議等待位階更靠近 5 或斜率再轉強。"
+      : "目前偏追蹤名單，先觀察趨勢是否轉正再考慮。");
 
   return `
     <strong>推薦原因（${s.level} 級 / ${s.score} 分）</strong><br>
-    1. ${smaReason}<br>
-    2. ${upperReason}<br>
-    3. ${zoneReason}<br>
-    建議：搭配籌碼面再確認是否有大戶提前調節。
+    <div style="margin-top:8px;">
+      <div><strong>1) 月線斜率</strong>：目前 <strong>${s.smaSlopePct}%</strong>，門檻 >= 0.8%（強）或 > 0%（弱強），狀態：${smaStatus}，得分：${smaScore}/40。</div>
+      <div><strong>2) 上軌斜率</strong>：目前 <strong>${s.upperSlopePct}%</strong>，門檻 >= 0.8%（強）或 > 0%（弱強），狀態：${upperStatus}，得分：${upperScore}/30。</div>
+      <div><strong>3) 位階（BB）</strong>：目前 <strong>${s.bbPosition}</strong>，目標接近 5（理想區 4~6），狀態：${zoneStatus}，得分：${zoneScore}/30。</div>
+      <div style="margin-top:6px;"><strong>判讀建議</strong>：${actionHint}</div>
+    </div>
   `;
 }
 
