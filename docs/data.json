@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-21T06:48:05.646Z",
+  "updatedAt": "2026-05-21T07:53:20.571Z",
   "source": {
     "disposal": "https://chengwaye.com/disposal-forecast",
     "quote": "Yahoo Finance"
@@ -24,7 +24,8 @@
       "upperSlopePct": 1.11,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "1809",
@@ -39,7 +40,8 @@
       "upperSlopePct": 1.49,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": -213
+      "institutionalNetLots": 495,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "6263",
@@ -54,7 +56,8 @@
       "upperSlopePct": 1.29,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "8227",
@@ -69,7 +72,8 @@
       "upperSlopePct": 0.85,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3450",
@@ -84,7 +88,8 @@
       "upperSlopePct": 1.69,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": 386.88
+      "institutionalNetLots": -949.18,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "4966",
@@ -99,7 +104,8 @@
       "upperSlopePct": 1.62,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "2454",
@@ -114,7 +120,8 @@
       "upperSlopePct": 0.47,
       "score": 85,
       "level": "A",
-      "institutionalNetLots": -1557.77
+      "institutionalNetLots": -570.17,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "1595",
@@ -129,7 +136,8 @@
       "upperSlopePct": 0.18,
       "score": 85,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "2426",
@@ -144,7 +152,8 @@
       "upperSlopePct": 1.81,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": -141
+      "institutionalNetLots": 512,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3455",
@@ -159,7 +168,8 @@
       "upperSlopePct": 1.61,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6173",
@@ -174,7 +184,8 @@
       "upperSlopePct": 3.95,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "8069",
@@ -189,7 +200,8 @@
       "upperSlopePct": 3.21,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "8114",
@@ -204,7 +216,8 @@
       "upperSlopePct": 2.12,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": 80.96
+      "institutionalNetLots": -146.63,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3498",
@@ -219,7 +232,8 @@
       "upperSlopePct": 3.51,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "8091",
@@ -234,7 +248,8 @@
       "upperSlopePct": 2.16,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "4529",
@@ -249,7 +264,8 @@
       "upperSlopePct": 0.62,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "8027",
@@ -264,7 +280,8 @@
       "upperSlopePct": 0.44,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "2486",
@@ -279,7 +296,8 @@
       "upperSlopePct": 0.07,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": -170.57
+      "institutionalNetLots": 154.97,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "4764",
@@ -294,7 +312,8 @@
       "upperSlopePct": 0.42,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": -59.13
+      "institutionalNetLots": 103.89,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "4908",
@@ -309,7 +328,8 @@
       "upperSlopePct": 0.76,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "8064",
@@ -324,7 +344,8 @@
       "upperSlopePct": 0.32,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3581",
@@ -339,7 +360,8 @@
       "upperSlopePct": 0.44,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3016",
@@ -354,7 +376,8 @@
       "upperSlopePct": 0.67,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": -90.25
+      "institutionalNetLots": 72.37,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "4561",
@@ -369,7 +392,8 @@
       "upperSlopePct": 0.64,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "2059",
@@ -384,7 +408,8 @@
       "upperSlopePct": 0.55,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": 63.11
+      "institutionalNetLots": -19.69,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3135",
@@ -399,7 +424,8 @@
       "upperSlopePct": 0.52,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": 317.58
+      "institutionalNetLots": -400,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3090",
@@ -414,7 +440,8 @@
       "upperSlopePct": 9.38,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -840.76
+      "institutionalNetLots": 70.71,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3577",
@@ -429,7 +456,8 @@
       "upperSlopePct": 4.7,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "2911",
@@ -444,7 +472,8 @@
       "upperSlopePct": 8.73,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 314.18
+      "institutionalNetLots": -104,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3675",
@@ -459,7 +488,8 @@
       "upperSlopePct": 5.06,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "5321",
@@ -474,7 +504,8 @@
       "upperSlopePct": 9.04,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6538",
@@ -489,7 +520,8 @@
       "upperSlopePct": 7.37,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6742",
@@ -504,7 +536,8 @@
       "upperSlopePct": 8.28,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 303.36
+      "institutionalNetLots": 27.36,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "6834",
@@ -519,7 +552,8 @@
       "upperSlopePct": 7.6,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 777.05
+      "institutionalNetLots": -718.41,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "7610",
@@ -534,7 +568,8 @@
       "upperSlopePct": 7.56,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 14.08
+      "institutionalNetLots": -43.74,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "7730",
@@ -549,7 +584,8 @@
       "upperSlopePct": 3.52,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -15.85
+      "institutionalNetLots": -8.78,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "2233",
@@ -564,7 +600,8 @@
       "upperSlopePct": 2.02,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 47.74
+      "institutionalNetLots": 127.05,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "4542",
@@ -579,7 +616,8 @@
       "upperSlopePct": 3.29,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "4951",
@@ -594,7 +632,8 @@
       "upperSlopePct": -0.57,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6861",
@@ -609,7 +648,8 @@
       "upperSlopePct": -0.52,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -4.16
+      "institutionalNetLots": -16,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "4991",
@@ -624,7 +664,8 @@
       "upperSlopePct": 0.88,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6182",
@@ -639,7 +680,8 @@
       "upperSlopePct": 3.06,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "5464",
@@ -654,7 +696,8 @@
       "upperSlopePct": 4.53,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "7769",
@@ -669,7 +712,8 @@
       "upperSlopePct": 2.81,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 59.6
+      "institutionalNetLots": -154.74,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "8042",
@@ -684,7 +728,8 @@
       "upperSlopePct": 5.18,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "2492",
@@ -699,7 +744,8 @@
       "upperSlopePct": 6.98,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 3008.77
+      "institutionalNetLots": -343.7,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3026",
@@ -714,7 +760,8 @@
       "upperSlopePct": 5.87,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 617.55
+      "institutionalNetLots": 472.96,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "6831",
@@ -729,7 +776,8 @@
       "upperSlopePct": 3.7,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -56.4
+      "institutionalNetLots": 201.81,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "8358",
@@ -744,7 +792,8 @@
       "upperSlopePct": 2.34,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "5228",
@@ -759,7 +808,8 @@
       "upperSlopePct": 3.52,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6449",
@@ -774,7 +824,8 @@
       "upperSlopePct": 6.1,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -28.47
+      "institutionalNetLots": 645.71,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3008",
@@ -789,7 +840,8 @@
       "upperSlopePct": 3.1,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -243.28
+      "institutionalNetLots": 678.04,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "6924",
@@ -804,7 +856,8 @@
       "upperSlopePct": 5.73,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 0.42
+      "institutionalNetLots": -15,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "8291",
@@ -819,7 +872,8 @@
       "upperSlopePct": 10.05,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3624",
@@ -834,7 +888,8 @@
       "upperSlopePct": 4.96,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "8455",
@@ -849,7 +904,8 @@
       "upperSlopePct": 6.04,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "4749",
@@ -864,7 +920,8 @@
       "upperSlopePct": 0.44,
       "score": 65,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6274",
@@ -879,7 +936,8 @@
       "upperSlopePct": 0.29,
       "score": 65,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3664",
@@ -894,7 +952,8 @@
       "upperSlopePct": 0.55,
       "score": 65,
       "level": "B",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3532",
@@ -909,7 +968,8 @@
       "upperSlopePct": 0.2,
       "score": 55,
       "level": "B",
-      "institutionalNetLots": 119.97
+      "institutionalNetLots": 48.07,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3491",
@@ -924,7 +984,8 @@
       "upperSlopePct": 1.18,
       "score": 50,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6405",
@@ -939,7 +1000,8 @@
       "upperSlopePct": -0.26,
       "score": 50,
       "level": "C",
-      "institutionalNetLots": -15
+      "institutionalNetLots": 14.68,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "1597",
@@ -954,7 +1016,8 @@
       "upperSlopePct": -0.3,
       "score": 40,
       "level": "C",
-      "institutionalNetLots": 22.2
+      "institutionalNetLots": 137,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "8444",
@@ -969,7 +1032,8 @@
       "upperSlopePct": -0.14,
       "score": 40,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3030",
@@ -984,7 +1048,8 @@
       "upperSlopePct": 0.22,
       "score": 35,
       "level": "C",
-      "institutionalNetLots": -124.53
+      "institutionalNetLots": 8.4,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "6488",
@@ -999,7 +1064,8 @@
       "upperSlopePct": 0.21,
       "score": 35,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "1591",
@@ -1014,7 +1080,8 @@
       "upperSlopePct": 1.97,
       "score": 30,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6683",
@@ -1029,7 +1096,8 @@
       "upperSlopePct": 0.29,
       "score": 15,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "7751",
@@ -1044,7 +1112,8 @@
       "upperSlopePct": 0.09,
       "score": 15,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3665",
@@ -1059,7 +1128,8 @@
       "upperSlopePct": 0.19,
       "score": 15,
       "level": "C",
-      "institutionalNetLots": -478.55
+      "institutionalNetLots": 342.5,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "6217",
@@ -1074,7 +1144,8 @@
       "upperSlopePct": 0.12,
       "score": 15,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "8021",
@@ -1089,7 +1160,8 @@
       "upperSlopePct": -0.3,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 85.99
+      "institutionalNetLots": -136.46,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3535",
@@ -1104,7 +1176,8 @@
       "upperSlopePct": -0.08,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": -855.78
+      "institutionalNetLots": -25.96,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "3163",
@@ -1119,7 +1192,8 @@
       "upperSlopePct": -1.07,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "3653",
@@ -1134,7 +1208,8 @@
       "upperSlopePct": -2.12,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 14.79
+      "institutionalNetLots": -148.28,
+      "institutionalDataDate": "20260521"
     },
     {
       "ticker": "4979",
@@ -1149,7 +1224,8 @@
       "upperSlopePct": -0.26,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6829",
@@ -1164,7 +1240,8 @@
       "upperSlopePct": -1,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "4971",
@@ -1179,7 +1256,8 @@
       "upperSlopePct": -2.14,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": null
+      "institutionalNetLots": null,
+      "institutionalDataDate": null
     },
     {
       "ticker": "6806",
@@ -1194,7 +1272,8 @@
       "upperSlopePct": -1.69,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 11
+      "institutionalNetLots": 23,
+      "institutionalDataDate": "20260521"
     }
   ]
 }

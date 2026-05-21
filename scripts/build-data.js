@@ -92,7 +92,7 @@ async function fetchInstitutionalNetMap() {
         const netShares = parseNumberLike(row[row.length - 1]);
         const net = sharesToLots(netShares);
         if (/^\d{4,6}$/.test(ticker) && net !== null) {
-          netMap.set(ticker, net);
+          netMap.set(ticker, { netLots: net, dataDate: twseDate });
         }
       });
       pickedDate = d;
@@ -128,7 +128,7 @@ async function fetchInstitutionalNetMap() {
       const netShares = parseNumberLike(netText);
       const net = sharesToLots(netShares);
       if (/^\d{4,6}$/.test(ticker) && net !== null) {
-        netMap.set(ticker, net);
+        netMap.set(ticker, { netLots: net, dataDate: rocDate });
       }
     });
   } catch (error) {
@@ -287,10 +287,11 @@ async function run() {
     try {
       const metrics = await calculateMetrics(stock);
       if (metrics) {
-        const net = institutionalNetMap.get(stock.ticker);
+        const chip = institutionalNetMap.get(stock.ticker) || null;
         results.push({
           ...metrics,
-          institutionalNetLots: net ?? null
+          institutionalNetLots: chip ? chip.netLots : null,
+          institutionalDataDate: chip ? chip.dataDate : null
         });
       }
     } catch (error) {

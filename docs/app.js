@@ -75,6 +75,7 @@ function renderRows(stocks) {
       <td class="${s.smaSlopePct >= 0 ? "up" : "down"}">${s.smaSlopePct}</td>
       <td class="${s.upperSlopePct >= 0 ? "up" : "down"}">${s.upperSlopePct}</td>
       <td class="${(s.institutionalNetLots ?? 0) > 0 ? "up" : ((s.institutionalNetLots ?? 0) < 0 ? "down" : "")}">${fmtNetLots(s.institutionalNetLots)}</td>
+      <td>${s.institutionalDataDate || "-"}</td>
       <td class="${chipSignal.cls}">${chipSignal.text}</td>
       <td><span class="level level-${s.level.toLowerCase()}">${s.level}</span></td>
       <td>${s.score}</td>
@@ -85,7 +86,7 @@ function renderRows(stocks) {
       const detail = document.createElement("tr");
       detail.className = "detail-row";
       detail.innerHTML = `
-        <td colspan="14">
+        <td colspan="15">
           <div class="reason">${buildReasonHtml(s)}</div>
         </td>
       `;
@@ -118,6 +119,7 @@ function buildReasonHtml(s) {
       ? "條件有部分成立，建議等待位階更靠近 5 或斜率再轉強。"
       : "目前偏追蹤名單，先觀察趨勢是否轉正再考慮。");
 
+  const chipDate = s.institutionalDataDate || "-";
   const chipHint = (s.institutionalNetLots ?? null) === null
     ? "主力籌碼：今日無公開數據。"
     : (s.institutionalNetLots > 0
@@ -132,7 +134,7 @@ function buildReasonHtml(s) {
       <div><strong>1) 月線斜率</strong>：目前 <strong>${s.smaSlopePct}%</strong>，門檻 >= 0.8%（強）或 > 0%（弱強），狀態：${smaStatus}，得分：${smaScore}/40。</div>
       <div><strong>2) 上軌斜率</strong>：目前 <strong>${s.upperSlopePct}%</strong>，門檻 >= 0.8%（強）或 > 0%（弱強），狀態：${upperStatus}，得分：${upperScore}/30。</div>
       <div><strong>3) 位階（BB）</strong>：目前 <strong>${s.bbPosition}</strong>，目標接近 5（理想區 4~6），狀態：${zoneStatus}，得分：${zoneScore}/30。</div>
-      <div><strong>4) 籌碼</strong>：${chipHint}</div>
+      <div><strong>4) 籌碼</strong>：${chipHint}（資料日：${chipDate}）</div>
       <div style="margin-top:6px;"><strong>判讀建議</strong>：${actionHint}</div>
     </div>
   `;
