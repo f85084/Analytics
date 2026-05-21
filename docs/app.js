@@ -1,27 +1,5 @@
 let allStocks = [];
 let expandedTicker = null;
-const mapUrls = {
-  daily: "https://aistockmap.com/?topic=asic-ip-design&activeTab=daily",
-  weekly: "https://aistockmap.com/?topic=asic-ip-design&activeTab=weekly"
-};
-
-function setupMapEmbed() {
-  const frame = document.getElementById("stockMapFrame");
-  const openLink = document.getElementById("mapOpenLink");
-  const dailyBtn = document.getElementById("mapDailyBtn");
-  const weeklyBtn = document.getElementById("mapWeeklyBtn");
-
-  function setMode(mode) {
-    const url = mapUrls[mode];
-    frame.src = url;
-    openLink.href = url;
-    dailyBtn.classList.toggle("active", mode === "daily");
-    weeklyBtn.classList.toggle("active", mode === "weekly");
-  }
-
-  dailyBtn.addEventListener("click", () => setMode("daily"));
-  weeklyBtn.addEventListener("click", () => setMode("weekly"));
-}
 
 function renderKpis(summary) {
   const root = document.getElementById("kpis");
@@ -125,8 +103,6 @@ function buildReasonHtml(s) {
 }
 
 async function init() {
-  setupMapEmbed();
-
   const res = await fetch("./data.json");
   const data = await res.json();
   allStocks = data.stocks || [];

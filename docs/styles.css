@@ -98,24 +98,13 @@ th, td {
   align-items: center;
   gap: 8px;
 }
-.map-btn {
+.map-btn-link {
   border: 1px solid var(--line);
   background: #fff;
   border-radius: 8px;
   padding: 4px 10px;
-  cursor: pointer;
-}
-.map-btn.active {
-  background: #f8f0df;
-  border-color: #d3b88f;
-}
-.map-frame {
-  margin-top: 10px;
-  width: 100%;
-  min-height: 560px;
-  border: 1px solid #ece6d9;
-  border-radius: 10px;
-  background: #fff;
+  text-decoration: none;
+  color: var(--ink);
 }
 .map-tip {
   margin: 8px 0 0;
