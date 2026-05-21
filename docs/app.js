@@ -45,6 +45,10 @@ function renderRows(stocks) {
     if (v > 0) return `${v}`;
     return `已過 ${Math.abs(v)}`;
   }
+  function fmtNetLots(v) {
+    if (v === null || v === undefined || Number.isNaN(v)) return "-";
+    return Number(v).toLocaleString("zh-TW");
+  }
 
   stocks.forEach((s) => {
     const tr = document.createElement("tr");
@@ -61,6 +65,7 @@ function renderRows(stocks) {
       <td class="${zoneClass}">${s.bbPosition}</td>
       <td class="${s.smaSlopePct >= 0 ? "up" : "down"}">${s.smaSlopePct}</td>
       <td class="${s.upperSlopePct >= 0 ? "up" : "down"}">${s.upperSlopePct}</td>
+      <td class="${(s.institutionalNetLots ?? 0) > 0 ? "up" : ((s.institutionalNetLots ?? 0) < 0 ? "down" : "")}">${fmtNetLots(s.institutionalNetLots)}</td>
       <td><span class="level level-${s.level.toLowerCase()}">${s.level}</span></td>
       <td>${s.score}</td>
     `;
@@ -70,7 +75,7 @@ function renderRows(stocks) {
       const detail = document.createElement("tr");
       detail.className = "detail-row";
       detail.innerHTML = `
-        <td colspan="12">
+        <td colspan="13">
           <div class="reason">${buildReasonHtml(s)}</div>
         </td>
       `;
