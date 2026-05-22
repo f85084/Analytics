@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-22T06:05:07.465Z",
+  "updatedAt": "2026-05-22T08:38:48.368Z",
   "source": {
     "disposal": "https://chengwaye.com/disposal-forecast",
     "quote": "Yahoo Finance"
@@ -88,8 +88,8 @@
       "upperSlopePct": 1.4,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 15.2,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -8.44,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3135",
@@ -104,8 +104,8 @@
       "upperSlopePct": 0.96,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 18.91,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 39.91,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3581",
@@ -136,8 +136,8 @@
       "upperSlopePct": 1.77,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": -123.92,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 14,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6263",
@@ -184,8 +184,8 @@
       "upperSlopePct": 0.79,
       "score": 85,
       "level": "A",
-      "institutionalNetLots": -450.2,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 542.46,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3455",
@@ -232,8 +232,8 @@
       "upperSlopePct": 0.41,
       "score": 85,
       "level": "A",
-      "institutionalNetLots": -383.72,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -76.83,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3016",
@@ -248,8 +248,8 @@
       "upperSlopePct": 0.22,
       "score": 85,
       "level": "A",
-      "institutionalNetLots": -133.74,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 51.8,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "4561",
@@ -280,8 +280,8 @@
       "upperSlopePct": 0.17,
       "score": 85,
       "level": "A",
-      "institutionalNetLots": 78.86,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -26.33,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "5386",
@@ -328,8 +328,8 @@
       "upperSlopePct": 2.19,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": -74,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -181.1,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "5464",
@@ -360,8 +360,8 @@
       "upperSlopePct": 2.37,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": 81.86,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -111.64,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "8042",
@@ -392,8 +392,8 @@
       "upperSlopePct": 3.19,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": 163.96,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 63.08,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "8455",
@@ -424,8 +424,8 @@
       "upperSlopePct": 0.13,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": -2316.28,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 808.27,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "2911",
@@ -440,8 +440,8 @@
       "upperSlopePct": 9.6,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -466.3,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 25.92,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3675",
@@ -504,8 +504,8 @@
       "upperSlopePct": 6.01,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 492.14,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -528.4,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6834",
@@ -520,8 +520,8 @@
       "upperSlopePct": 7.22,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -113,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 509.98,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "7610",
@@ -536,8 +536,8 @@
       "upperSlopePct": 6.09,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -101.78,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 141.94,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "7730",
@@ -552,8 +552,8 @@
       "upperSlopePct": 3.87,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -17.26,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 88.53,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "2327",
@@ -568,8 +568,8 @@
       "upperSlopePct": 7.11,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -1566.93,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 3225.31,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "2478",
@@ -584,8 +584,8 @@
       "upperSlopePct": 8.87,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 295.63,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 79.86,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3048",
@@ -600,8 +600,8 @@
       "upperSlopePct": 8.28,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 760.25,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 3780.17,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3294",
@@ -648,8 +648,8 @@
       "upperSlopePct": 4.91,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 109184.74,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 14713.27,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3491",
@@ -680,8 +680,8 @@
       "upperSlopePct": 6.07,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -724.59,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 1237.53,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6209",
@@ -696,8 +696,8 @@
       "upperSlopePct": 4.03,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 1027.94,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 343.12,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6642",
@@ -728,8 +728,8 @@
       "upperSlopePct": 2.87,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -430.05,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -1894.69,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6861",
@@ -744,8 +744,8 @@
       "upperSlopePct": -0.08,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 92.68,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -58.7,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "4991",
@@ -776,8 +776,8 @@
       "upperSlopePct": -0.12,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -42.58,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -86,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6182",
@@ -808,8 +808,8 @@
       "upperSlopePct": 7.87,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 2057.76,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 3948.97,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3026",
@@ -824,8 +824,8 @@
       "upperSlopePct": 6.9,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 185.03,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 345.9,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6173",
@@ -888,8 +888,8 @@
       "upperSlopePct": 2.98,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 313.18,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 17.27,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6924",
@@ -904,8 +904,8 @@
       "upperSlopePct": 5.14,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 8.56,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -2.66,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "8091",
@@ -968,8 +968,8 @@
       "upperSlopePct": 9.8,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 2791.73,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 929.86,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6449",
@@ -984,8 +984,8 @@
       "upperSlopePct": 5.61,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 396.67,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": -2.6,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "8027",
@@ -1080,8 +1080,8 @@
       "upperSlopePct": 0.07,
       "score": 15,
       "level": "C",
-      "institutionalNetLots": 8,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 8.9,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6683",
@@ -1128,8 +1128,8 @@
       "upperSlopePct": -1.36,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": -734.12,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 1282.99,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "3653",
@@ -1144,8 +1144,8 @@
       "upperSlopePct": -2.41,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 202.13,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 224.12,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6829",
@@ -1208,8 +1208,8 @@
       "upperSlopePct": -0.57,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 477.49,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 373.06,
+      "institutionalDataDate": "20260522"
     },
     {
       "ticker": "6217",
@@ -1240,8 +1240,8 @@
       "upperSlopePct": -0.39,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 41,
-      "institutionalDataDate": "20260521"
+      "institutionalNetLots": 63,
+      "institutionalDataDate": "20260522"
     }
   ]
 }
