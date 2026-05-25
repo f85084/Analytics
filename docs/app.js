@@ -1,6 +1,6 @@
 let allStocks = [];
 let expandedTicker = null;
-const STALE_HOURS = 30;
+const STALE_MINUTES = 30;
 
 function renderKpis(summary) {
   const root = document.getElementById("kpis");
@@ -163,12 +163,12 @@ function renderDataStatusBanner(updatedAt) {
   if (!banner || Number.isNaN(updatedAt.getTime())) return;
 
   const ageMs = Date.now() - updatedAt.getTime();
-  const staleMs = STALE_HOURS * 60 * 60 * 1000;
+  const staleMs = STALE_MINUTES * 60 * 1000;
 
   if (ageMs > staleMs) {
-    const ageHours = Math.floor(ageMs / (60 * 60 * 1000));
+    const ageMinutes = Math.floor(ageMs / (60 * 1000));
     banner.hidden = false;
-    banner.textContent = `資料已超過 ${ageHours} 小時未更新，可能是排程或抓取失敗。請到 GitHub Actions 檢查最新執行狀態。`;
+    banner.textContent = `資料已超過 ${ageMinutes} 分鐘未更新，可能是排程或抓取失敗。請到 GitHub Actions 手動執行「Auto Update Stock Data」。`;
     return;
   }
 
