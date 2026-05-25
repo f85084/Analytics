@@ -66,76 +66,95 @@ function sharesToLots(shares) {
   return Math.round((shares / 1000) * 100) / 100;
 }
 
-async function fetchInstitutionalNetMap() {
-  const netMap = new Map();
+// Collect up to TARGET_DAYS valid TWSE trading dates within MAX_LOOKBACK calendar days.
+const TARGET_DAYS = 5;
+const MAX_LOOKBACK = 14;
 
-  let pickedDate = null;
-  for (let i = 0; i < 7; i++) {
+async function collectTwseDates() {
+  const validDates = [];
+  for (let i = 0; i < MAX_LOOKBACK && validDates.length < TARGET_DAYS; i++) {
+    const d = new Date();
+    d.setDate(d.getDate() - i);
+    const twseDate = formatTwDate(d);
     try {
-      const d = new Date();
-      d.setDate(d.getDate() - i);
-      const twseDate = formatTwDate(d);
-      const twseRes = await axios.get(TWSE_T86_URL, {
-        params: {
-          response: "json",
-          date: twseDate,
-          selectType: "ALLBUT0999"
-        },
+      const res = await axios.get(TWSE_T86_URL, {
+        params: { response: "json", date: twseDate, selectType: "ALLBUT0999" },
         timeout: 20000
       });
+      const rows = res.data?.data || [];
+      if (Array.isArray(rows) && rows.length > 0) {
+        validDates.push({ twseDate, date: d, rows });
+      }
+    } catch (_) {
+      // skip non-trading day
+    }
+  }
+  return validDates;
+}
 
-      const rows = twseRes.data?.data || [];
-      if (!Array.isArray(rows) || rows.length === 0) continue;
+async function fetchInstitutionalNetMap() {
+  // Key: ticker, Value: { netLots (5-day sum), firstDate, lastDate, dayCount }
+  const netMap = new Map();
 
-      rows.forEach((row) => {
-        const ticker = String(row[0] || "").trim();
-        const netShares = parseNumberLike(row[row.length - 1]);
-        const net = sharesToLots(netShares);
-        if (/^\d{4,6}$/.test(ticker) && net !== null) {
-          netMap.set(ticker, { netLots: net, dataDate: twseDate });
-        }
+  // --- TWSE: fetch up to 5 trading days ---
+  const twseDays = await collectTwseDates();
+
+  for (const { twseDate, rows } of twseDays) {
+    rows.forEach((row) => {
+      const ticker = String(row[0] || "").trim();
+      const netShares = parseNumberLike(row[row.length - 1]);
+      const net = sharesToLots(netShares);
+      if (!/^\d{4,6}$/.test(ticker) || net === null) return;
+
+      if (!netMap.has(ticker)) {
+        netMap.set(ticker, { netLots: 0, firstDate: twseDate, lastDate: twseDate, dayCount: 0 });
+      }
+      const entry = netMap.get(ticker);
+      entry.netLots += net;
+      entry.dayCount += 1;
+      if (twseDate < entry.firstDate) entry.firstDate = twseDate;
+      if (twseDate > entry.lastDate) entry.lastDate = twseDate;
+    });
+  }
+
+  const dateRange = twseDays.length > 0
+    ? `${twseDays[twseDays.length - 1].twseDate}~${twseDays[0].twseDate}`
+    : null;
+
+  // --- TPEX: use the same dates to keep windows in sync ---
+  for (const { date } of twseDays) {
+    const rocDate = formatRocDate(date);
+    try {
+      await new Promise((r) => setTimeout(r, 300));
+      const tpexRes = await axios.get(TPEX_3I_URL, {
+        params: { l: "zh-tw", d: rocDate },
+        headers: { "User-Agent": "Mozilla/5.0", Referer: "https://www.tpex.org.tw/" },
+        timeout: 20000
       });
-      pickedDate = d;
-      break;
+      const html = typeof tpexRes.data === "string" ? tpexRes.data : "";
+      const $ = cheerio.load(html);
+      $("table tbody tr").each((_, tr) => {
+        const tds = $(tr).find("td");
+        if (tds.length < 3) return;
+        const ticker = $(tds[0]).text().trim();
+        const netShares = parseNumberLike($(tds[tds.length - 1]).text().trim());
+        const net = sharesToLots(netShares);
+        if (!/^\d{4,6}$/.test(ticker) || net === null) return;
+
+        if (!netMap.has(ticker)) {
+          netMap.set(ticker, { netLots: 0, firstDate: null, lastDate: null, dayCount: 0 });
+        }
+        const entry = netMap.get(ticker);
+        entry.netLots += net;
+        entry.dayCount += 1;
+      });
     } catch (error) {
-      // Try previous day.
+      console.error(`TPEX institutional data failed (${rocDate}): ${error.message}`);
     }
   }
 
-  try {
-    const d = pickedDate || new Date();
-    const rocDate = formatRocDate(d);
-    const tpexRes = await axios.get(TPEX_3I_URL, {
-      params: {
-        l: "zh-tw",
-        d: rocDate
-      },
-      headers: {
-        "User-Agent": "Mozilla/5.0",
-        Referer: "https://www.tpex.org.tw/"
-      },
-      timeout: 20000
-    });
-
-    const html = typeof tpexRes.data === "string" ? tpexRes.data : "";
-    const $ = cheerio.load(html);
-    $("table tbody tr").each((_, tr) => {
-      const tds = $(tr).find("td");
-      if (tds.length < 3) return;
-
-      const ticker = $(tds[0]).text().trim();
-      const netText = $(tds[tds.length - 1]).text().trim();
-      const netShares = parseNumberLike(netText);
-      const net = sharesToLots(netShares);
-      if (/^\d{4,6}$/.test(ticker) && net !== null) {
-        netMap.set(ticker, { netLots: net, dataDate: rocDate });
-      }
-    });
-  } catch (error) {
-    console.error(`TPEX institutional data failed: ${error.message}`);
-  }
-
-  return netMap;
+  console.log(`Institutional data: ${twseDays.length} trading days, range ${dateRange}`);
+  return { netMap, dateRange, dayCount: twseDays.length };
 }
 
 function sma(values, period) {
@@ -280,7 +299,7 @@ async function calculateMetrics(stock) {
 
 async function run() {
   const candidates = await fetchDisposalCandidates();
-  const institutionalNetMap = await fetchInstitutionalNetMap();
+  const { netMap: institutionalNetMap, dateRange: institutionalDateRange, dayCount: institutionalDayCount } = await fetchInstitutionalNetMap();
   const results = [];
 
   for (const stock of candidates) {
@@ -290,8 +309,9 @@ async function run() {
         const chip = institutionalNetMap.get(stock.ticker) || null;
         results.push({
           ...metrics,
-          institutionalNetLots: chip ? chip.netLots : null,
-          institutionalDataDate: chip ? chip.dataDate : null
+          institutionalNetLots: chip ? Math.round(chip.netLots) : null,
+          institutionalDateRange: chip ? institutionalDateRange : null,
+          institutionalDayCount: chip ? chip.dayCount : null
         });
       }
     } catch (error) {

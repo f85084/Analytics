@@ -75,7 +75,7 @@ function renderRows(stocks) {
       <td class="${s.smaSlopePct >= 0 ? "up" : "down"}">${s.smaSlopePct}</td>
       <td class="${s.upperSlopePct >= 0 ? "up" : "down"}">${s.upperSlopePct}</td>
       <td class="${(s.institutionalNetLots ?? 0) > 0 ? "up" : ((s.institutionalNetLots ?? 0) < 0 ? "down" : "")}">${fmtNetLots(s.institutionalNetLots)}</td>
-      <td>${s.institutionalDataDate || "-"}</td>
+      <td>${s.institutionalDateRange || "-"}</td>
       <td class="${chipSignal.cls}">${chipSignal.text}</td>
       <td><span class="level level-${s.level.toLowerCase()}">${s.level}</span></td>
       <td>${s.score}</td>
@@ -119,14 +119,15 @@ function buildReasonHtml(s) {
       ? "條件有部分成立，建議等待位階更靠近 5 或斜率再轉強。"
       : "目前偏追蹤名單，先觀察趨勢是否轉正再考慮。");
 
-  const chipDate = s.institutionalDataDate || "-";
+  const chipDate = s.institutionalDateRange || "-";
+  const dayLabel = s.institutionalDayCount ? `近${s.institutionalDayCount}個交易日` : "近5日";
   const chipHint = (s.institutionalNetLots ?? null) === null
-    ? "主力籌碼：今日無公開數據。"
+    ? "籌碼：無公開數據。"
     : (s.institutionalNetLots > 0
-      ? `主力籌碼：買超 ${s.institutionalNetLots.toLocaleString("zh-TW")} 張。`
+      ? `三大法人${dayLabel}合計買超 ${s.institutionalNetLots.toLocaleString("zh-TW")} 張。`
       : (s.institutionalNetLots < 0
-        ? `主力籌碼：賣超 ${Math.abs(s.institutionalNetLots).toLocaleString("zh-TW")} 張。`
-        : "主力籌碼：持平。"));
+        ? `三大法人${dayLabel}合計賣超 ${Math.abs(s.institutionalNetLots).toLocaleString("zh-TW")} 張。`
+        : "三大法人持平。"));
 
   return `
     <strong>推薦原因（${s.level} 級 / ${s.score} 分）</strong><br>
