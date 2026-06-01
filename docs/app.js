@@ -142,7 +142,7 @@ function buildReasonHtml(s) {
 }
 
 async function init() {
-  const res = await fetch("./data.json");
+  const res = await fetch(`./data.json?t=${Date.now()}`, { cache: "no-store" });
   const data = await res.json();
   allStocks = data.stocks || [];
 
