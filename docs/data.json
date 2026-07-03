@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T08:17:59.603Z",
+  "updatedAt": "2026-07-03T08:49:22.968Z",
   "source": {
     "disposal": "https://chengwaye.com/disposal-forecast",
     "quote": "Yahoo Finance"
@@ -24,8 +24,8 @@
       "upperSlopePct": 0.85,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 5883,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 7733,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -41,8 +41,8 @@
       "upperSlopePct": 1.44,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 563,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 1075,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -92,8 +92,8 @@
       "upperSlopePct": 0.95,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 1781,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 191,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -177,8 +177,8 @@
       "upperSlopePct": 1.02,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": -80291,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -99706,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -194,8 +194,8 @@
       "upperSlopePct": 1.22,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 1407,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -5875,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -211,8 +211,8 @@
       "upperSlopePct": 2.1,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": 532,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -1040,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -245,8 +245,8 @@
       "upperSlopePct": 1.75,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": -1008,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 1327,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -313,8 +313,8 @@
       "upperSlopePct": 0.88,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": 327,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -9,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -347,8 +347,8 @@
       "upperSlopePct": 0.53,
       "score": 85,
       "level": "A",
-      "institutionalNetLots": 2727,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 834,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -364,8 +364,8 @@
       "upperSlopePct": 2.92,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": 31,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -1433,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -381,8 +381,8 @@
       "upperSlopePct": 2.26,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": 395,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 351,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -415,8 +415,8 @@
       "upperSlopePct": 2.68,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": -2209,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -1297,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -449,8 +449,8 @@
       "upperSlopePct": 2.6,
       "score": 80,
       "level": "A",
-      "institutionalNetLots": -401,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 710,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -466,8 +466,8 @@
       "upperSlopePct": 0.22,
       "score": 75,
       "level": "B",
-      "institutionalNetLots": -5683,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 1434,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -500,8 +500,8 @@
       "upperSlopePct": 9.22,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 981,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -429,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -517,8 +517,8 @@
       "upperSlopePct": 6.55,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 758,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 410,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -534,8 +534,8 @@
       "upperSlopePct": 8.43,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -1845,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 3958,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -585,8 +585,8 @@
       "upperSlopePct": 4.16,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 13361,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 4940,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -602,8 +602,8 @@
       "upperSlopePct": 5.49,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 444,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 780,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -619,8 +619,8 @@
       "upperSlopePct": 4.72,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 808,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -888,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -636,8 +636,8 @@
       "upperSlopePct": 7.98,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -687,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -397,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -653,8 +653,8 @@
       "upperSlopePct": 6.81,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 10380,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 20706,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -670,8 +670,8 @@
       "upperSlopePct": 5.01,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 1530,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 1266,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -687,8 +687,8 @@
       "upperSlopePct": 1.9,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 172,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -19,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -704,8 +704,8 @@
       "upperSlopePct": 4.81,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -2290,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -2206,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -721,8 +721,8 @@
       "upperSlopePct": 2.01,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 983,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 335,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -738,8 +738,8 @@
       "upperSlopePct": 2.69,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 123,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 1235,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -772,8 +772,8 @@
       "upperSlopePct": 2.77,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 1043,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 6078,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -789,8 +789,8 @@
       "upperSlopePct": -0.02,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -1429,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 1172,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -806,8 +806,8 @@
       "upperSlopePct": 2.96,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -71,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 111,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -840,8 +840,8 @@
       "upperSlopePct": 3.87,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": -36,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -8,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -857,8 +857,8 @@
       "upperSlopePct": 4.82,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 21933,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 25045,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -908,8 +908,8 @@
       "upperSlopePct": 5.62,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 3669,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 2726,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -943,7 +943,7 @@
       "score": 70,
       "level": "B",
       "institutionalNetLots": 1,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 3
     },
     {
@@ -959,8 +959,8 @@
       "upperSlopePct": 5.14,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 2118,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 2952,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -976,8 +976,8 @@
       "upperSlopePct": 7.12,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 7246,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 11929,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1027,8 +1027,8 @@
       "upperSlopePct": 0.64,
       "score": 65,
       "level": "B",
-      "institutionalNetLots": -254,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -240,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1061,8 +1061,8 @@
       "upperSlopePct": -0.87,
       "score": 60,
       "level": "B",
-      "institutionalNetLots": 610,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -546,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1112,8 +1112,8 @@
       "upperSlopePct": 0.37,
       "score": 45,
       "level": "C",
-      "institutionalNetLots": 771,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -154,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1163,8 +1163,8 @@
       "upperSlopePct": -0.47,
       "score": 40,
       "level": "C",
-      "institutionalNetLots": 1479,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -422,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1180,8 +1180,8 @@
       "upperSlopePct": 0.17,
       "score": 35,
       "level": "C",
-      "institutionalNetLots": 1456,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 160,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1197,8 +1197,8 @@
       "upperSlopePct": 0.11,
       "score": 35,
       "level": "C",
-      "institutionalNetLots": 1254,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -1401,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1282,8 +1282,8 @@
       "upperSlopePct": -0.49,
       "score": 10,
       "level": "C",
-      "institutionalNetLots": 50,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -198,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1299,8 +1299,8 @@
       "upperSlopePct": -0.18,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 1582,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 355,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1333,8 +1333,8 @@
       "upperSlopePct": -0.66,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": -523,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": -2134,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     },
     {
@@ -1367,8 +1367,8 @@
       "upperSlopePct": -1.29,
       "score": 0,
       "level": "C",
-      "institutionalNetLots": 645,
-      "institutionalDateRange": "20260624~20260630",
+      "institutionalNetLots": 853,
+      "institutionalDateRange": "20260626~20260703",
       "institutionalDayCount": 5
     }
   ]
