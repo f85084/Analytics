@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T05:51:37.247Z",
+  "updatedAt": "2026-07-06T06:22:43.404Z",
   "source": {
     "disposal": "https://chengwaye.com/disposal-forecast",
     "quote": "Yahoo Finance"
@@ -7,8 +7,8 @@
   "summary": {
     "total": 74,
     "levelA": 23,
-    "levelB": 32,
-    "levelC": 19
+    "levelB": 33,
+    "levelC": 18
   },
   "stocks": [
     {
@@ -947,6 +947,23 @@
       "institutionalDayCount": 5
     },
     {
+      "ticker": "6683",
+      "name": "雍智科技",
+      "market": "OTC",
+      "symbol": "6683.TWO",
+      "fastestDisposal": "07-10",
+      "daysUntilDisposal": 4,
+      "price": 1780,
+      "bbPosition": 3.74,
+      "smaSlopePct": 0.51,
+      "upperSlopePct": 0.62,
+      "score": 55,
+      "level": "B",
+      "institutionalNetLots": null,
+      "institutionalDateRange": null,
+      "institutionalDayCount": null
+    },
+    {
       "ticker": "3042",
       "name": "晶技",
       "market": "Listed",
@@ -996,23 +1013,6 @@
       "institutionalNetLots": -208,
       "institutionalDateRange": "20260629~20260703",
       "institutionalDayCount": 5
-    },
-    {
-      "ticker": "6683",
-      "name": "雍智科技",
-      "market": "OTC",
-      "symbol": "6683.TWO",
-      "fastestDisposal": "07-10",
-      "daysUntilDisposal": 4,
-      "price": 1740,
-      "bbPosition": 2.51,
-      "smaSlopePct": 0.39,
-      "upperSlopePct": 0.39,
-      "score": 45,
-      "level": "C",
-      "institutionalNetLots": null,
-      "institutionalDateRange": null,
-      "institutionalDayCount": null
     },
     {
       "ticker": "2478",
