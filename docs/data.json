@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27T11:38:46.409Z",
+  "updatedAt": "2026-08-27T12:09:27.938Z",
   "source": {
     "disposal": "https://chengwaye.com/disposal-forecast",
     "quote": "Yahoo Finance"
@@ -296,7 +296,7 @@
       "upperSlopePct": 4.2,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 2088,
+      "institutionalNetLots": 3891,
       "institutionalDateRange": "20260821~20260827",
       "institutionalDayCount": 5
     },
