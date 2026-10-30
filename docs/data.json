@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30T08:00:18.405Z",
+  "updatedAt": "2026-10-30T08:31:02.087Z",
   "source": {
     "disposal": "https://chengwaye.com/disposal-forecast",
     "quote": "Yahoo Finance"
@@ -41,8 +41,8 @@
       "upperSlopePct": 1.32,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": -720,
-      "institutionalDateRange": "20261021~20261029",
+      "institutionalNetLots": 2076,
+      "institutionalDateRange": "20261022~20261030",
       "institutionalDayCount": 5
     },
     {
@@ -75,8 +75,8 @@
       "upperSlopePct": 0.89,
       "score": 90,
       "level": "A",
-      "institutionalNetLots": 765,
-      "institutionalDateRange": "20261021~20261029",
+      "institutionalNetLots": 525,
+      "institutionalDateRange": "20261022~20261030",
       "institutionalDayCount": 5
     },
     {
@@ -211,8 +211,8 @@
       "upperSlopePct": 1.27,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 5408,
-      "institutionalDateRange": "20261021~20261029",
+      "institutionalNetLots": 5473,
+      "institutionalDateRange": "20261022~20261030",
       "institutionalDayCount": 5
     },
     {
@@ -279,8 +279,8 @@
       "upperSlopePct": 5.67,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 504,
-      "institutionalDateRange": "20261021~20261029",
+      "institutionalNetLots": 654,
+      "institutionalDateRange": "20261022~20261030",
       "institutionalDayCount": 5
     },
     {
@@ -296,8 +296,8 @@
       "upperSlopePct": 7.51,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 27399,
-      "institutionalDateRange": "20261021~20261029",
+      "institutionalNetLots": 27586,
+      "institutionalDateRange": "20261022~20261030",
       "institutionalDayCount": 5
     },
     {
@@ -313,9 +313,9 @@
       "upperSlopePct": 0.03,
       "score": 65,
       "level": "B",
-      "institutionalNetLots": 15,
-      "institutionalDateRange": "20261021~20261029",
-      "institutionalDayCount": 2
+      "institutionalNetLots": 14,
+      "institutionalDateRange": "20261022~20261030",
+      "institutionalDayCount": 3
     },
     {
       "ticker": "3374",
@@ -364,8 +364,8 @@
       "upperSlopePct": 0.84,
       "score": 30,
       "level": "C",
-      "institutionalNetLots": -3080,
-      "institutionalDateRange": "20261021~20261029",
+      "institutionalNetLots": -2602,
+      "institutionalDateRange": "20261022~20261030",
       "institutionalDayCount": 5
     },
     {
@@ -381,8 +381,8 @@
       "upperSlopePct": 0.42,
       "score": 15,
       "level": "C",
-      "institutionalNetLots": 349,
-      "institutionalDateRange": "20261021~20261029",
+      "institutionalNetLots": 125,
+      "institutionalDateRange": "20261022~20261030",
       "institutionalDayCount": 5
     },
     {
