@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T07:56:41.773Z",
+  "updatedAt": "2026-11-04T08:27:27.380Z",
   "source": {
     "disposal": "https://chengwaye.com/disposal-forecast",
     "quote": "Yahoo Finance"
@@ -24,8 +24,8 @@
       "upperSlopePct": 1.3,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 2798,
-      "institutionalDateRange": "20261028~20261103",
+      "institutionalNetLots": -1855,
+      "institutionalDateRange": "20261029~20261104",
       "institutionalDayCount": 5
     },
     {
@@ -41,8 +41,8 @@
       "upperSlopePct": 1.46,
       "score": 100,
       "level": "A",
-      "institutionalNetLots": 597,
-      "institutionalDateRange": "20261028~20261103",
+      "institutionalNetLots": 90,
+      "institutionalDateRange": "20261029~20261104",
       "institutionalDayCount": 5
     },
     {
@@ -177,8 +177,8 @@
       "upperSlopePct": 5.47,
       "score": 70,
       "level": "B",
-      "institutionalNetLots": 10826,
-      "institutionalDateRange": "20261028~20261103",
+      "institutionalNetLots": 6411,
+      "institutionalDateRange": "20261029~20261104",
       "institutionalDayCount": 5
     },
     {
@@ -228,8 +228,8 @@
       "upperSlopePct": 1.23,
       "score": 30,
       "level": "C",
-      "institutionalNetLots": -5403,
-      "institutionalDateRange": "20261028~20261103",
+      "institutionalNetLots": -9885,
+      "institutionalDateRange": "20261029~20261104",
       "institutionalDayCount": 5
     },
     {
